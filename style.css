@@ -26,6 +26,7 @@ nav{
 }
 .bottomSection{
   height: 20%;
+  background-color: white;
 }
 .section{
   height: 100%;
@@ -64,7 +65,7 @@ img.ri
 }
 @media(max-width: 1580px) {
   .title{
-    font-size: 5em;
+    font-size: 3em;
   }
   .unbehaved-element {
     font-size: eem; /* Fine tune unbehaved elements */
