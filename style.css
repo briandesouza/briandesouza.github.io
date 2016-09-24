@@ -21,8 +21,11 @@ nav{
   background-color: white;
 }
 .photoSection{
-  height: 70%;
+  height: 50%;
   background-color: white;
+}
+.bottomSection{
+  height: 20%;
 }
 .section{
   height: 100%;
@@ -32,13 +35,6 @@ nav{
 .subsection{
   height:50%;
   background-color: red;
-}
-
-img.central{
-  margin: 0;
-  position: relative;
-  top: 38%;
-  left: 38%;
 }
 
 .title{
@@ -56,7 +52,7 @@ img.ri
 }
 
 @media screen and (orientation: portrait) {
-  img.ri { max-width: 90%; }
+  img.ri { max-width: 50%; }
 }
 
 @media screen and (orientation: landscape) {
@@ -79,7 +75,6 @@ img.ri
     font-size: 2em;
   }
   img.ri{
-    margin-top: 5%;
     width:auto;
     height: auto;
   }
