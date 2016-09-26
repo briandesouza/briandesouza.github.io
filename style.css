@@ -238,7 +238,8 @@ img.ri
     font-size: 0.7em;
   }
   .section2{
-    height: auto;
+    height: 100%;
+    padding-bottom: 0;
   }
   .timeline .timeline-item .info, .timeline .timeline-item .year{
     color:black;
