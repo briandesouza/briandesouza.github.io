@@ -44,16 +44,8 @@ ul.topnav li a:hover {
 
 ul.topnav li.icon {display: none;}
 
-.fixed-topnav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-}
-
 .section{
-  height: 103%;
+  height: 100%;
   background-color: white;
 }
 .subsection{
@@ -237,7 +229,13 @@ img.ri
   p.info{
     font-size: 0.7em;
   }
+  .section2{
+    height: auto;
   }
+  .timeline .timeline-item .info, .timeline .timeline-item .year {
+    color: black;
+  }
+}
 
 
   img.ri{
