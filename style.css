@@ -113,6 +113,10 @@ ul.topnav li.icon {display: none;}
   padding-top: 1em;
   padding-bottom: 0.4em;
 }
+.mylifepadding{
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
 #buttonLeft{
   float:left;
   padding-left: 20%;
@@ -194,9 +198,6 @@ img.ri
 
 @media screen and (orientation: portrait) {
   img.ri { max-width: 50%; }
-  .timeline .timeline-item .info, .timeline .timeline-item .year {
-    color: black;
-  }
 }
 
 @media screen and (orientation: landscape) {
@@ -213,6 +214,9 @@ img.ri
   }
   .unbehaved-element {
     font-size: eem; /* Fine tune unbehaved elements */
+  }
+  .timeline .timeline-item .info, .timeline .timeline-item .year{
+    color:black;
   }
 }
 @media(max-width: 980px) {
@@ -236,6 +240,13 @@ img.ri
   .section2{
     height: auto;
   }
+  .timeline .timeline-item .info, .timeline .timeline-item .year{
+    color:black;
+  }
+  .mylifepadding{
+    padding-top: 10%;
+  }
+
 }
 
 
@@ -278,13 +289,6 @@ img.ri
     display: block;
     text-align: left;
   }
-  .timeline .timeline-item .info, .timeline .timeline-item .year {
-      color: black;
-}
-  .imgintro{
-    height: "30%";
-    width: "30%";
-  }
 }
 
 [aos="fade"] {
@@ -308,7 +312,6 @@ div {
     width: 100%;
 }
 .timeline .timeline-item .info, .timeline .timeline-item .year {
-    color: #eee;
     display: block;
     float:left;
     -webkit-transition: all 1s ease;
@@ -327,6 +330,7 @@ div {
     width: 22%;
 }
 .timeline .timeline-item .info {
+  color: #eee;
     width: 100%;
     width: 78%;
     margin-left: -2px;
