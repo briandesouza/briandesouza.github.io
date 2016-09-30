@@ -243,8 +243,11 @@ p.two{
     padding-top: 10%;
   }
   .section{
-    height: 200%;
+    height: 100%;
 }
+  .sectionML{	
+    height: 200%;
+	}
 
 }
 
