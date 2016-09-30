@@ -242,6 +242,9 @@ p.two{
   .mylifepadding{
     padding-top: 10%;
   }
+  .section{
+    height: 250%;
+}
 
 }
 
@@ -328,7 +331,7 @@ div {
     width: 22%;
 }
 .timeline .timeline-item .info {
-  color: #eee;
+    color: black;
     width: 100%;
     width: 78%;
     margin-left: -2px;
@@ -355,9 +358,11 @@ div {
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     transition: all 1s ease;
+    background-color: rgb(242, 242, 242);
 }
 .timeline .timeline-item.active .year, .timeline .timeline-item:hover .year {
     color: black;
+    background-color: rgb(242, 242, 242);
 }
 .timeline .timeline-item .marker .dot {
     background-color: white;
