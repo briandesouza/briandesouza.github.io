@@ -1,4 +1,3 @@
-
 *{
   margin: 0;
 }
@@ -184,16 +183,13 @@ p.two{
   font-weight: 300;
 }
 .arrow{
-  padding-top: .3em;
+  padding-top: 2%;
+  width:10%;
+  height: 25%;
 }
 .mlphoto{
   padding-top: 5em;
   height: 100%;
-}
-img.ri
-{
-	position: relative;
-	display: inline-block;
 }
 
 @media screen and (orientation: portrait) {
@@ -250,7 +246,9 @@ img.ri
 }
 
 
-  img.ri{
+img.ri{
+    position: relative;
+	   display: inline-block;
     width:auto;
     height: auto;
   }
