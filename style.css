@@ -79,11 +79,11 @@ ul.topnav li.icon {display: none;}
   height: 100%;
 }
 .subsection{
-  height:33% auto;
+  height:33%;
 }
 .sub{
   padding: 2%;
-  margin: .3em auto;
+  margin: .3em;
 }
 .icon:hover{
   -webkit-filter: brightness(155%);
@@ -273,6 +273,13 @@ p.two{
   display: inline-block;
   vertical-align:top;
 }
+p.pauthor{
+  font-size: 0.9em;
+  text-align: center;
+  font-family:Georgia, Times, "Times New Roman", serif;
+  color: rgba(110, 111, 115, 1);
+  padding-top: 0.1em;
+}
 .arrowright{
   -webkit-transition:background-color .25s,color .15s,box-shadow .25s,opacity 0.25s,filter 0.25s,border 0.15s;
   transition:background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
@@ -343,9 +350,6 @@ p.two{
   p.info{
     font-size: 1em;
   }
-  .section2{
-    height: auto;
-  }
   .timeline .timeline-item .info, .timeline .timeline-item .year{
     color:black;
   }
@@ -355,13 +359,23 @@ p.two{
   .section{
     height: 100%;
 }
-
+p.preduce{
+  padding-top: 0.3em;
+  font-size: 0.9em;
+}
+img.certificate{
+  height:100px;
+  width:100px;
+}
+p.certificate{
+  font-size: 0.5em;
+}
 }
 
 
 img.ri{
     position: relative;
-	   display: inline-block;
+	  display: inline-block;
     width:auto;
     height: auto;
   }
@@ -425,10 +439,6 @@ img.ri{
 /*timeline code */
 div {
     box-sizing: border-box;
-}
-.timeline {
-    text-align: center;
-    width: auto;
 }
 .timeline .timeline-item {
     width: 100%;
