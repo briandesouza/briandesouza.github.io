@@ -47,6 +47,7 @@
 
       <div class="section2">
 
+<!-- Who I am -->
         <button class="collapse white"> <div class="sub"><h1 class= "center subtitle two">Who I Am</h1>
         <br> <p class="two"> Background, Timeline and Interests </p></div></button>
         <div class="panel">
@@ -93,10 +94,54 @@
             <div class="pictureblock"><img src="img/warrenbuffet.png" height="70" width="70">
             <br><p class="two"><b>The Essays of<br> Warren Buffet</b><br><p class="pauthor">by Warren Buffett</p></p></div>
   </div></div>
-          <button class="collapse gray">  <div class=sub><h1 class= "center subtitle one">Experience and Achievements</h1>
-          <br> <p class="one"> Hackathon Prizes, Certificates and Skills</p></div></button>
+
+  <!-- Projects -->
+
+        <button class="collapse gray"> <div class="sub"><h1 class= "center subtitle one">Projects</h1>
+          <br> <p class="one"> Completed or Underdevelopment </p></div></button>
+          <div class="panel">
+            <div class="slideshow">
+              <a href="https://devpost.com/software/saveitwhilewecan"><div class="slideshow mySlides"><img src="img/dreamgreen.png" style="width:100%">
+                <figcaption class="slide-caption">DreamGreen estimates how much emission users generate,
+creates eco scores, and helps users comprehend how small changes, such as which foods they eat or type of transportation they take, can have great long term impacts on the environment.<br> Designed the idea behind the app and algorithms used to estimate emissions. (JAVA)
+                </figcaption>
+              </div></a>
+              <a href="https://github.com/emkaysri/CodeRed"><div class="slideshow mySlides"><img src="img/foodforchange.png" style="width:100%"></a>
+                <figcaption class="slide-caption">Food for Change provides a healthy lifestyle with foods users already have in their
+kitchens. <br> The app recommends nutricious recipes while tracking the user's intakes.<br> Worked on front-end. (JAVA, XML)
+                </figcaption>
+          </div></a>
+
+      <a class="arrowleft" onclick="plusDivs(-1)">&#10094;</a>
+      <a class="arrowright" onclick="plusDivs(1)">&#10095;</a>
+    </div>
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+    </script>
+  </div>
+
+  <!-- Experience And Achievements -->
+          <button class="collapse white">  <div class=sub><h1 class= "center subtitle two">Experience and Achievements</h1>
+          <br> <p class="two"> Hackathon Prizes, Certificates and Skills</p></div></button>
           <div class="panel">
             <div class="sub">
+
               <div class="pictureblock" > <img src="img/hdwin.png" height="200" width="200">
               <br><p class="two"> <b>Best use of Facebook API</b><br>HackDuke 2016 <br> Duke University<br>  Developed idea behind app<br>and algorithms<br>(JAVA)</p></div>
               <div class="pictureblock" ><img src="img/crwin.png" height="200" width="200">
@@ -105,56 +150,39 @@
               <br><p class="two"> <b>Software Team Member </b><br>UF AggreGator <br> NASA Robotic Mining Competition<br>2016 - Present <br>Working on robot autonomy<br>(C)</p></div>
               <div class="pictureblock"><img src="img/zerorobotics.png" height="200" width="200">
               <br><p class="two"><b>Software Team Leader</b><br>Zero Robotics<br>2014 - 2015<br> Led software team<br> and designed strategy<br> of the sattelite.<br> (C)</p></div>
+
+              <h2 class="two">Languages</h2>
+              <br><br>
+              <div class="pictureblock "><img src="img/english.png" class="certificate" height="70" width="70">
+              <br><p class="two">English</p></div>
+              <div class="pictureblock"><img src="img/portuguese.png" class="certificate" height="70" width="70">
+              <br><p class="two">Portuguese</p></div>
+              <div class="pictureblock preduce"><img src="img/java.png" class="certificate" height="70" width="70">
+              <br><p class="two">JAVA</div>
+              <div class="pictureblock"><img src="img/c.png" class="certificate" height="70" width="70">
+              <br><p class="two">C</p></div>
+              <div class="pictureblock"><img src="img/html.png" class="certificate" height="70" width="70">
+              <br><p class="two">HTML 5</p></div>
+              <div class="pictureblock"><img src="img/css.png" class="certificate" height="70" width="70">
+              <br><p class="two">CSS 3</p></div>
+
               <h2 class="two">Certificates</h2>
               <br><br>
-              <div class="pictureblock"><img src="img/adobemedia.png" class="certificate" height="150" width="150">
-              <br><p class="certificate">Adobe Certified Associate<br> Rich Media Communication<br> 2015<br>(Adobe Flash CS6)</font></p></div>
-              <div class="pictureblock"><img src="img/adobewebc.png" class="certificate" height="150" width="150">
-              <br><p class="certificate">Adobe Certified Associate<br> Web Communication<br> 2014<br> (Adobe DreamWeaver CS6)</font></p></div>
-              <div class="pictureblock preduce"><img src="img/word.png" class="certificate" height="150" width="150">
-              <br><p class="certificate">Microsoft Office Specialist <br> Office Word<br> 2013<br>(Microsoft Office Word)</font></p></div>
-              <div class="pictureblock"><img src="img/outlook.png" class="certificate" height="150" width="150">
-              <br><p class="certificate">Microsoft Office Specialist <br> Office Outlook<br> 2013<br> (Microsoft Office Outlook)</font></p></div>
+              <div class="pictureblock"><img src="img/adobemedia.png" class="certificate" height="70" width="70">
+              <br><p class="two">Adobe Certified Associate<br> Rich Media Communication<br> 2015<br>(Adobe Flash CS6)</p></div>
+              <div class="pictureblock"><img src="img/adobewebc.png" class="certificate" height="70" width="70">
+              <br><p class="two">Adobe Certified Associate<br> Web Communication<br> 2014<br> (Adobe DreamWeaver CS6)</p></div>
+              <div class="pictureblock preduce"><img src="img/word.png" class="certificate" height="70" width="70">
+              <br><p class="two">Microsoft Office Specialist <br> Office Word<br> 2013<br>(Microsoft Office Word)</p></div>
+              <div class="pictureblock"><img src="img/outlook.png" class="certificate" height="70" width="70">
+              <br><p class="two">Microsoft Office Specialist <br> Office Outlook<br> 2013<br> (Microsoft Office Outlook)</p></div>
 
 
         </div>
 
     </div>
 
-        <button class="collapse white"> <div class="sub"><h1 class= "center subtitle two">Projects</h1>
-        <br> <p class="two"> Completed or Underdevelopment </p></div></button>
-        <div class="panel">
-        <div class="slideshow">
-            <div class="slideshow"><img class="mySlides" src="img/dreamgreen.png" style="width:100%">
-            </div>
-            <div class="slideshow"><img class="mySlides" src="img/foodforchange.png" style="width:100%">
-            </div>
-
-            <a class="arrowleft" onclick="plusDivs(-1)">&#10094;</a>
-            <a class="arrowright" onclick="plusDivs(1)">&#10095;</a>
-          </div>
-        </div>
-
-          <script>
-          var slideIndex = 1;
-          showDivs(slideIndex);
-
-          function plusDivs(n) {
-            showDivs(slideIndex += n);
-          }
-
-          function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-               x[i].style.display = "none";
-            }
-            x[slideIndex-1].style.display = "block";
-          }
-          </script>
-
+<!-- Education -->
         <button class="collapse gray">  <div class=sub><h1 class= "center subtitle one">Education and Involvement</h1>
         <br> <p class="one"> Schools, and Clubs</p></div></button>
         <div class="panel">
@@ -196,22 +224,20 @@
               }
             </script>
 
-
+<!-- Bottom Links -->
         <div id="ctc" class="sub">
-          <div class="pictureblock" > <a href="mailto:brian.nunes.souza@gmail.com" target="_top"><img src="img/email.png" height="100" width="100"></a>
-          <br><p class="two"> <b>Email</b><br>(Preferred)<br> <font size="1.7em">brian.nunes.souza@gmail.com</font></p></div>
-          <div class="pictureblock" ><img src="img/phone.png" height="100" width="100">
-          <br><p class="two"> <b>Phone</b><br>(561)299-4363</p></div>
-          <div class="pictureblock" >  <a href="https://www.facebook.com/brian.souza.509" target="_blank"><img src="img/facebook.png" height="100" width="100"></a>
-          <br><p class="two"> <b>Facebook</b><br>Brian Nunes<br> De Souza</b></p></div>
-          <div class="pictureblock" >  <a href="https://github.com/briandesouza" target="_blank"><img src="img/github.png" height="100" width="100"></a>
-          <br><p class="two"> <b>GitHub</b><br>briandesouza</b></p></div>
-          <div class="pictureblock" >  <a href="https://devpost.com/briandesouza" target="_blank"><img src="img/devpost.png" height="100" width="100"></a>
-          <br><p class="two"> <b>Devpost</b><br>briandesouza</b></p></div>
-          <div class="pictureblock" >  <a href="https://www.linkedin.com/in/brian-nunes-de-souza-559188128" target="_blank"><img src="img/linkedin.png" height="100" width="100"></a>
-          <br><p class="two"> <b>LinkedIn</b><br>briandesouza</b></p></div>
-          <div class="pictureblock" >  <a href="https://twitter.com/briandesouza97" target="_blank"><img src="img/twitter.png" height="100" width="100"></a>
-          <br><p class="two"> <b>Twitter</b><br>briandesouza97</b></p></div>
+          <div class="pictureblock" > <a href="mailto:brian.nunes.souza@gmail.com" target="_top"><img src="img/email.png" height="70" width="70" class="contact-block"></a>
+          <br><p class="two contact-block"> <b>Email</b><br>brian.nunes.souza<br>@gmail.com</p></div>
+          <div class="pictureblock" ><img src="img/phone.png" height="70" width="70" class="contact-block">
+          <br><p class="two contact-block"> <b>Phone</b><br>(561)299-4363</p></div>
+          <div class="pictureblock" >  <a href="https://www.facebook.com/brian.souza.509" target="_blank"><img src="img/facebook.png" height="70" width="70" class="contact-block"></a>
+          <br><p class="two contact-block"> <b>Facebook</b><br>Brian Nunes<br> De Souza</b></p></div>
+          <div class="pictureblock" >  <a href="https://github.com/briandesouza" target="_blank"><img src="img/github.png" height="70" width="70" class="contact-block"></a>
+          <br><p class="two contact-block"> <b>GitHub</b><br>briandesouza</b></p></div>
+          <div class="pictureblock" >  <a href="https://devpost.com/briandesouza" target="_blank"><img src="img/devpost.png" height="70" width="70" class="contact-block"></a>
+          <br><p class="two contact-block"> <b>Devpost</b><br>briandesouza</b></p></div>
+          <div class="pictureblock" >  <a href="https://www.linkedin.com/in/brian-nunes-de-souza-559188128" target="_blank"><img src="img/linkedin.png" height="70" width="70" class="contact-block"></a>
+          <br><p class="two contact-block"> <b>LinkedIn</b><br>briandesouza</b></p></div>
         </div>
 
         <div class="bottomBar"> Designed and Coded by Brian Nunes De Souza</div></div>
