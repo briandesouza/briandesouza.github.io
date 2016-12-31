@@ -25,8 +25,12 @@ button.white{
   background-color: white;
   color: black;
 }
-button.collapse.active, button.collapse:hover {
+button.collapse:hover {
     background-color: #ddd;
+}
+button.collapse.active,button.collapse.active .two, button.collapse.active .one{
+    background-color: black;
+    color: white;
 }
 div.panel {
     background-color: white;
@@ -70,8 +74,9 @@ ul.topnav li a:hover {
   color: white;
 }
 
-ul.topnav li.icon {display: none;}
-
+ul.topnav li.icon {
+  display: none;
+}
 .section{
   height: 100%;
   background-color: white;
@@ -322,7 +327,10 @@ p.pauthor{
 }
 
 @media screen and (orientation: landscape) {
-  img.ri { max-height: 90%; }
+  img.ri {
+    max-height: 80%;
+    width: auto;
+}
 
 }
 
