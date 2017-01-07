@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="img/circleme.png">
     <link rel="stylesheet" href="stylesheets/style.css"/>
     <link rel="stylesheet" href="stylesheets/magic-master/magic.css">
+    <script src="javascript/canvas-video-player.js"></script><script>
 
 
     <script>
@@ -25,12 +26,37 @@
   </head>
 
   <body>
-    <div class="section">
-        <video poster="img/background-image.png" autoplay loop class="background">
-            <source src="img/background.mp4" type="video/mp4">
-            <source src="img/background.webm" type="video/webm">
-            <source src="img/background.ogv" type="video/ogg">
-        </video>
+    <div class="section video-responsive">
+            <video class="video background" muted="muted" loop="loop" autoplay="autoplay" poster="img/background-image.png">
+              <source src="img/background.mp4" type="video/mp4">
+              <source src="img/background.webm" type="video/webm">
+              <source src="img/background.ogv" type="video/ogg">
+                Your browser does not support HTML5 video.
+            </video>
+          <canvas class="canvas">  </canvas>
+
+          <script>
+          var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+          if (isIOS) {
+
+              var canvasVideo = new CanvasVideoPlayer({
+                  videoSelector: '.video',
+                  canvasSelector: '.canvas',
+                  timelineSelector: false,
+                  autoplay: true,
+                  makeLoop: true,
+                  pauseOnClick: false,
+                  audio: false
+              });
+
+          }else {
+
+              // Use HTML5 video
+              document.querySelectorAll('.canvas')[0].style.display = 'none';
+
+          }
+          </script>
         <div class="nameSection">
         <h1 class="title magictime vanishIn"> Brian Nunes De Souza</h1>
         </div>
