@@ -3,8 +3,7 @@
 }
 
 html, body{
-  height: 100vh;
-  min-height: 99%;
+  height:100%;
   text-align: center;
   font-family: 'Helvetica', 'Arial', sans-serif;
 }
@@ -14,8 +13,7 @@ video{
   left:50%;
   transform: translate(-50%, -50%);
   min-width: 100%;
-  height: 100vh;
-  min-height: 99%;
+  min-height: 100%;
   width: auto;
   height: auto;
 }
@@ -90,19 +88,16 @@ ul.topnav li.icon {
   display: none;
 }
 video.background{
-  height: 100vh;
-  min-height: 99%;
+  height: 100%;
   width:100%;
   object-fit:cover;
 }
 .section{
-  height: 100vh;
-  min-height: 99%;
+  height: 100%;
   background-color: white;
 }
 .sectionML{
-  height: 100vh;
-  min-height: 99%;
+  height: 100%;
 }
 .subsection{
   height:33%;
@@ -329,8 +324,7 @@ p.pauthor{
 }
 .mlphoto{
   padding-top: 5em;
-  height: 100vh;
-  min-height: 99%;
+  height: 100%;
 }
 .slide-caption{
   background-color: black;
@@ -469,8 +463,7 @@ Mouse Animation icon
     padding-top: 10%;
   }
   .section{
-    height: 100vh;
-    min-height: 99%;
+    height: 100%;
   }
   p.preduce{
     padding-top: 0.3em;
