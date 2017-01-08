@@ -3,7 +3,8 @@
 }
 
 html, body{
-  height:100%;
+  min-height:100%;
+  height:auto;
   text-align: center;
   font-family: 'Helvetica', 'Arial', sans-serif;
 }
@@ -88,15 +89,19 @@ ul.topnav li.icon {
   display: none;
 }
 video.background{
+  min-height:100%;
+  height:auto;
   width:100%;
   object-fit:cover;
 }
 .section{
-  height: 100%;
+  min-height:100%;
+  height:auto;
   background-color: white;
 }
 .sectionML{
-  height: 100%;
+  min-height:100%;
+  height:auto;
 }
 .subsection{
   height:33%;
@@ -323,6 +328,8 @@ p.pauthor{
 }
 .mlphoto{
   padding-top: 5em;
+  min-height:100%;
+  height:auto;
 }
 .slide-caption{
   background-color: black;
@@ -461,7 +468,8 @@ Mouse Animation icon
     padding-top: 10%;
   }
   .section{
-    height: 100%;
+    min-height:100%;
+    height:auto;
   }
   p.preduce{
     padding-top: 0.3em;
