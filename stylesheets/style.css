@@ -463,10 +463,9 @@ Mouse Animation icon
     padding-top: 10%;
   }
   .section{
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    height: 100vh;
+    min-height: 99%;
+    height: auto;
   }
   p.preduce{
     padding-top: 0.3em;
