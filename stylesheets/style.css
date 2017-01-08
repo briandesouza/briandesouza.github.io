@@ -88,7 +88,6 @@ ul.topnav li.icon {
   display: none;
 }
 video.background{
-  height: 100%;
   width:100%;
   object-fit:cover;
 }
@@ -324,7 +323,6 @@ p.pauthor{
 }
 .mlphoto{
   padding-top: 5em;
-  height: 100%;
 }
 .slide-caption{
   background-color: black;
