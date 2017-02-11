@@ -64,7 +64,7 @@
                 <a href="#experience" onclick=$("#menu-close").click();>Experience</a>
             </li>
             <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Resume</a>
+                <a href="https://drive.google.com/open?id=0B13xVW9DRpH2R3hCUkVHQS0xTms" onclick=$("#menu-close").click(); target="_blank">Resume</a>
             </li>
             <li>
                 <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
@@ -97,7 +97,7 @@
             <a id="intro-button" href="#mystory" class="btn btn-dark btn-lg magic-third vanishIn">My Story</a>
             <a id="intro-button" href="#projects" class="btn btn-dark btn-lg magic-fourth vanishIn">Projects</a>
             <a id="intro-button" href="#experience" class="btn btn-dark btn-lg magic-fith vanishIn">Experience</a>
-            <a id="intro-button" href="#about" class="btn btn-dark btn-lg magic-seventh vanishIn">Resume</a>
+            <a id="intro-button" href="https://drive.google.com/open?id=0B13xVW9DRpH2R3hCUkVHQS0xTms" class="btn btn-dark btn-lg magic-seventh vanishIn" target="_blank">Resume</a>
             <a id="intro-button" href="#contact" class="btn btn-dark btn-lg magic-eighth vanishIn">Contact</a>
             </div>
         </div>
@@ -214,12 +214,13 @@
             Your browser does not support HTML5 video.
         </video>
         <div class="container portfolio">
-            <div class="row">
+          <class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center sub-heading">
                   <h1 class="title"> Experience </h1>
                   <hr class="small">
+                  <div class="row">
                   <h3> Software Position</h3>
-                  <div class="portfolio-item portfolio-item-aggregator box-softwareposition">
+                  <div class="portfolio-item experience-item portfolio-item-aggregator box-softwareposition">
                           <figure>
                           <img class="img-portfolio img-responsive" src="img/aggregator.jpg">
                           <figcaption>
@@ -227,7 +228,7 @@
                           Under training to develop software for AggreGator team of 2017-2018. Developed autonomous, obstacle avoidance, arduino robot. Currently learning C++.</figcaption>
                           </figure>
                         </div>
-                  <div class="portfolio-item portfolio-item-livegreenlogo box-softwareposition">
+                  <div class="portfolio-item experience-item  portfolio-item-livegreenlogo box-softwareposition">
                           <figure>
                           <img class="img-portfolio img-responsive" src="img/livegreenteam.jpg">
                           <figcaption>
@@ -236,7 +237,7 @@
                           </figure>
                       </a>
                   </div>
-                  <div class="portfolio-item portfolio-item-zeroroboticslogo box-softwareposition">
+                  <div class="portfolio-item experience-item portfolio-item-zeroroboticslogo box-softwareposition">
                           <figure>
                           <img class="img-portfolio img-responsive" src="img/zerorobotics.png">
                           <figcaption>
@@ -245,8 +246,10 @@
                          </figure>
                       </a>
                   </div>
-                  <h3>Hackathons</h3>
-                  <div class="portfolio-item portfolio-item-swamplogo box-softwareposition">
+                </div>
+                  <h3 class="experience-subtitle"> Hackathons</h3>
+                  <div class="row">
+                  <div class="portfolio-item experience-item portfolio-item-swamplogo box-softwareposition">
                           <figure>
                           <img class="img-portfolio img-responsive" src="img/swampwin.jpg">
                           <figcaption>
@@ -254,16 +257,16 @@
                           Designed algorithms and conducted small research with sponsors to calculate cultural fit match and understand their workplace environment.</figcaption>
                           </figure>
                         </div>
-                  <div class="portfolio-item portfolio-item-hackdukelogo box-softwareposition">
+                  <div class="portfolio-item experience-item portfolio-item-hackdukelogo box-softwareposition">
                           <figure>
                           <img class="img-portfolio img-responsive" src="img/dukewin.jpg">
                           <figcaption>
-                          <h3>Best Use of Facebook API at Hack Duke</h3>
+                          <h3>Best Use of Facebook API</h3>
                           Designed algorithms which estimate emissions and ecological score, collected data for formulas, and developed the idea behing the app. </figcaption>
                           </figure>
                       </a>
                   </div>
-                  <div class="portfolio-item portfolio-item-coderedlogo box-softwareposition">
+                  <div class="portfolio-item experience-item portfolio-item-coderedlogo box-softwareposition">
                           <figure>
                           <img class="img-portfolio img-responsive" src="img/coderedwin.jpg">
                           <figcaption>
@@ -272,15 +275,14 @@
                           </figure>
                       </a>
                   </div>
+                </div>
               </div> <!-- /.col-lg-10 col-lg-offset-1 text-center-->
             </div>
-            <!-- /.row -->
-        </div>
         <!-- /.container -->
     </section><!-- /.Experience -->
 
     <!-- Footer -->
-    <footer class="header" id="contact">
+    <section class="header" id="contact">
       <video class="background" muted="muted" loop="loop" autoplay="autoplay">
         <source src="video/mountainvideo.mp4" type="video/mp4">
         <source src="video/mountainvideo.webm" type="video/webm">
@@ -311,9 +313,7 @@
                     <br>
                 </div>
               </div>
-            </div>
 
-                <div id="footer-container" class="container">
                     <ul class="list-inline">
                         <li>
                             <a href="https://www.facebook.com/briannunesdesouza" target="_blank"><i class="fa fa-facebook fa-fw fa-5x"></i></a>
@@ -327,9 +327,9 @@
                     </ul>
                     <hr class="small">
                     <p class="text-muted">Developed by Brian Nunes De Souza</p>
-                </div>
+              </div>
         <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-    </footer>
+    </section>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
