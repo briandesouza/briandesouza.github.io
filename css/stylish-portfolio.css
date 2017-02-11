@@ -428,7 +428,7 @@ hr.small {
         top: -1800px;
     }
 }
-@media (max-height: 800px) and (max-width:980px) {
+@media (max-height: 800px) and (max-width:110px) {
   .mystory-container h1{
     font-size: 1.5em;
     line-height: 150%;
