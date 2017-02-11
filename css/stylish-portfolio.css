@@ -700,14 +700,10 @@ figcaption{
 
 /* Contact-form */
 #contact .container{
-  position: absolute;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
 }
 #contact video .background{
   position: absolute;
-  top: 47%;
+  top: 50%;
   left:50%;
   transform: translate(-50%, -50%);
   min-width: 100%;
