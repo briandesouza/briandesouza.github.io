@@ -4,8 +4,8 @@ Licensed under the MIT license
 Copyright (c) 2014 Christian Pucci
 */
 .magic{
-  -webkit-animation-delay: 5s; /* Safari 4.0 - 8.0 */
-    animation-delay: 5s;
+  -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
+    animation-delay: 3s;
 }
 .magic-first{
   -webkit-animation-duration: 2s;
