@@ -231,9 +231,6 @@ hr.small {
   #projects figcaption{
     background-color: rgba(0,0,0,0.95);
   }
-  #projects{
-    padding-bottom: 0;
-  }
 }
 
 /* MyLife */
@@ -522,11 +519,14 @@ hr.small {
 }
 
 /*Experience */
+#experience{
+  background-color: #337ab7;
+}
 #experience video.background{
-  top:48%;
+  top:50%;
   min-width: 100%;
   min-height: 100%;
-	height: 105%;
+	height: 103%;
 	width:100%;
 	object-fit:cover;
 }
@@ -535,6 +535,7 @@ hr.small {
   text-align: center;
   font-size: 4.5em;
   font-weight: bold;
+  margin-top: 0;
 }
 #experience h3{
   padding-top: 1%;
@@ -554,21 +555,10 @@ hr.small {
   object-fit:cover;
 }
 }
-@media (max-width:992px) {
-   .experience-item {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 20%;
-}
-    .experience-item img {
-     width: 100%;
-    }
-}
 /* Projects/Portfolio */
 
 .portfolio {
     padding: 50px 0;
-    padding-bottom: 150px;
 }
 .portfolio-item {
     margin-bottom: 30px;
