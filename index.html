@@ -110,12 +110,6 @@
 
     <!-- My Story -->
     <section class="header" id="mystory">
-      <video class="background" muted="muted" loop="loop" autoplay="autoplay">
-        <source src="video/underwater.mp4" type="video/mp4">
-        <source src="video/underwater.webm" type="video/webm">
-        <source src="video/underwater.ogg" type="video/ogg">
-          Your browser does not support HTML5 video.
-      </video>
       <div id="bubbles">
         <div class="mystory-container">
           <div class="mystory-spacing">
@@ -224,7 +218,9 @@
                         <div class="col-md-4">
                             <div class="portfolio-item">
                               <figure>
+                              <div class="portfolio-item-aggregator">
                               <img class="img-portfolio" src="img/aggregator.jpg">
+                              </div>
                               <figcaption>
                               <h3>Software Team Member</h3>
                               Under training to develop software for AggreGator team of 2017-2018. Developed Arduino robot with autonomous and obstacle avoidance capabilities. Currently learning C++.</figcaption>
@@ -234,7 +230,9 @@
                         <div class="col-md-4 ">
                           <div class="portfolio-item">
                           <figure>
-                          <img class="img-portfolio" src="img/livegreenteam.jpg">
+                            <div class="portfolio-item-livegreenlogo">
+                          <img class="img-portfolio portfolio-item-livegreenlogo" src="img/livegreenteam.jpg">
+                          </div>
                           <figcaption>
                           <h3>Lead Software Developer and Researcher</h3>
                           Develop algorithms and conduct research responsible for calculating carbon emissions. Lead web and app software team.</figcaption>
@@ -244,7 +242,9 @@
                         <div class="col-md-4">
                           <div class="portfolio-item">
                           <figure>
-                          <img class="img-portfolio" src="img/zerorobotics.png">
+                          <div class="portfolio-item-zeroroboticslogo">
+                          <img class="img-portfolio portfolio-item-zeroroboticslogo" src="img/zerorobotics.png">
+                          </div>
                           <figcaption>
                            <h3>Software Team Leader</h3>
                            Led software team of Zero Robotics 2014 -2015 International High School Competition. Designed programming strategies and selected software members.</figcaption>
@@ -258,7 +258,9 @@
                             <div class="col-md-4">
                               <div class="portfolio-item">
                               <figure>
-                                <img class="img-portfolio" src="img/swampwin.jpg">
+                                <div class="portfolio-item-swamplogo">
+                                <img class="img-portfolio portfolio-item-swamplogo" src="img/swampwin.jpg">
+                                </div>
                                 <figcaption>
                                 <h3>Best Hack by Infinite Energy and 3rd Place</h3>
                                 Designed algorithms and conducted small research with sponsors to calculate cultural fit match and understand their workplace environment.</figcaption>
@@ -266,9 +268,11 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                <div class="portfolio-item">
+                                <div class="portfolio-item ">
                                   <figure>
-                                <img class="img-portfolio" src="img/dukewin.jpg">
+                                <div class="portfolio-item-hackdukelogo">
+                                <img class="img-portfolio portfolio-item-hackdukelogo" src="img/dukewin.jpg">
+                                </div>
                                 <figcaption>
                                 <h3>Best Use of Facebook API</h3>
                                 Designed algorithms which estimate emissions and ecological score, collected data for formulas, and developed the idea behing the app. </figcaption>
@@ -278,7 +282,9 @@
                                     <div class="col-md-4">
                                         <div class="portfolio-item">
                                           <figure>
+                                <div class="portfolio-item-coderedlogo">
                                 <img class="img-portfolio" src="img/coderedwin.jpg">
+                                </div>
                                 <figcaption>
                                 <h3>Best Hack by Infinite Energy and 3rd Place</h3>
                                 Designed algorithms and conducted small research with sponsors to calculate cultural fit match and understand their workplace environment.</figcaption>
@@ -298,90 +304,8 @@
         <!-- /.container -->
     </section>
 
-    <!-- Experience -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/
-    <section id="experience" class="header">
-        <video class="background" muted="muted" loop="loop" autoplay="autoplay">
-          <source src="video/sky.mp4" type="video/mp4">
-          <source src="video/sky.webm" type="video/webm">
-          <source src="video/sky.ogg" type="video/ogg">
-            Your browser does not support HTML5 video.
-        </video>
-        <div class="container portfolio">
-          <class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center sub-heading">
-                  <h1 class="title"> Experience </h1>
-                  <hr class="small">
-                  <div class="row">
-                  <h3> Software Position</h3>
-                  <div class="portfolio-item experience-item portfolio-item-aggregator box-softwareposition">
-                          <figure>
-                          <img class="img-portfolio img-responsive" src="img/aggregator.jpg">
-                          <figcaption>
-                          <h3>Software Team Member</h3>
-                          Under training to develop software for AggreGator team of 2017-2018. Developed autonomous, obstacle avoidance, arduino robot. Currently learning C++.</figcaption>
-                          </figure>
-                        </div>
-                  <div class="portfolio-item experience-item  portfolio-item-livegreenlogo box-softwareposition">
-                          <figure>
-                          <img class="img-portfolio img-responsive" src="img/livegreenteam.jpg">
-                          <figcaption>
-                          <h3>Lead Software Developer and Researcher</h3>
-                          Develop algorithms and conduct research responsible for calculating carbon emissions. Lead web and app software team.</figcaption>
-                          </figure>
-                      </a>
-                  </div>
-                  <div class="portfolio-item experience-item portfolio-item-zeroroboticslogo box-softwareposition">
-                          <figure>
-                          <img class="img-portfolio img-responsive" src="img/zerorobotics.png">
-                          <figcaption>
-                         <h3>Software Team Leader</h3>
-                         Led software team of Zero Robotics 2014 -2015 International High School Competition. Designed programming strategies and selected software members.</figcaption>
-                         </figure>
-                      </a>
-                  </div>
-                </div>
-                  <h3 class="experience-subtitle"> Hackathons</h3>
-                  <div class="row">
-                  <div class="portfolio-item experience-item portfolio-item-swamplogo box-softwareposition">
-                          <figure>
-                          <img class="img-portfolio img-responsive" src="img/swampwin.jpg">
-                          <figcaption>
-                          <h3>Best Hack by Infinite Energy and 3rd Place</h3>
-                          Designed algorithms and conducted small research with sponsors to calculate cultural fit match and understand their workplace environment.</figcaption>
-                          </figure>
-                        </div>
-                  <div class="portfolio-item experience-item portfolio-item-hackdukelogo box-softwareposition">
-                          <figure>
-                          <img class="img-portfolio img-responsive" src="img/dukewin.jpg">
-                          <figcaption>
-                          <h3>Best Use of Facebook API</h3>
-                          Designed algorithms which estimate emissions and ecological score, collected data for formulas, and developed the idea behing the app. </figcaption>
-                          </figure>
-                      </a>
-                  </div>
-                  <div class="portfolio-item experience-item portfolio-item-coderedlogo box-softwareposition">
-                          <figure>
-                          <img class="img-portfolio img-responsive" src="img/coderedwin.jpg">
-                          <figcaption>
-                          <h3>Best Hack by Infinite Energy and 3rd Place</h3>
-                          Designed algorithms and conducted small research with sponsors to calculate cultural fit match and understand their workplace environment.</figcaption>
-                          </figure>
-                      </a>
-                  </div>
-                </div>
-              </div> <!-- /.col-lg-10 col-lg-offset-1 text-center-->
-            </div>
-        <!-- /.container -->
-    </section><!-- /.Experience -->
-
     <!-- Footer -->
     <section class="header" id="contact">
-      <video class="background" muted="muted" loop="loop" autoplay="autoplay">
-        <source src="video/mountainvideo.mp4" type="video/mp4">
-        <source src="video/mountainvideo.webm" type="video/webm">
-          Your browser does not support HTML5 video.
-      </video>
       <div class="container">
           <div class="row">
                 <h1 class="title">Contact</h1>

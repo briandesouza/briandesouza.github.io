@@ -195,7 +195,7 @@ hr.small {
 		display: none;
 	}
   #top{
-      background: url("../video/Fishermen-Resting.jpg") no-repeat center center scroll;;
+      background: url("../video/Fishermen-Resting.jpg") no-repeat center center scroll;
   		top: 50%;
   		left:50%;
   		transform: translate(-50%, -50%);
@@ -225,10 +225,21 @@ hr.small {
     font-size: 1.5em;
     padding-bottom: 0.8em;
   }
+  #projects h1{
+    color:black;
+  }
+  #projects figcaption{
+    background-color: rgba(0,0,0,0.95);
+  }
+  #projects{
+    padding-bottom: 0;
+  }
 }
 
 /* MyLife */
 #mystory{
+  background: url("../video/underwater.jpeg") no-repeat center center scroll;
+  background-size: cover;
     display:block;
     height: 100%;
     background-position: center;
@@ -567,25 +578,25 @@ hr.small {
   text-decoration: none;
 }
 .portfolio-item-aggregator {
-    background: url("../img/aggregatorlogo.png");
+    background: url("../img/aggregatorlogo.png") no-repeat center center scroll;
 }
 .portfolio-item-livegreenlogo {
-    background: url("../img/livegreenlogorev.png");
+    background: url("../img/livegreenlogorev.png") no-repeat center center scroll;
 }
 .portfolio-item-zeroroboticslogo{
-    background: url("../img/zrlogo.gif");
+    background: url("../img/zrlogo.gif") no-repeat center center scroll;
 }
 .portfolio-item-swamplogo{
-    background: url("../img/swamplogo.png");
+    background: url("../img/swamplogo.png") no-repeat center center scroll;
 }
 .portfolio-item-hackdukelogo{
-    background: url("../img/hackdukelogo.png");
+    background: url("../img/hackdukelogo.png") no-repeat center center scroll;
 }
 .portfolio-item-coderedlogo{
-    background: url("../img/coderedlogo.png");
+    background: url("../img/coderedlogo.png") no-repeat center center scroll;
 }
 .portfolio-item:hover img {
-    opacity: 0.3;
+    opacity: 0.1;
 }
 .portfolio-item:hover .portfolio-item-text{
   opacity: 1;
@@ -683,7 +694,9 @@ figcaption{
 }
 
 /* Contact-form */
-#contact .container{
+#contact{
+  background: url("../video/mountain.jpg") no-repeat center center scroll;
+  background-size: cover;
 }
 #contact video .background{
   position: absolute;
