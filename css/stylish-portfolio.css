@@ -196,7 +196,7 @@ hr.small {
 		display: none;
 	}
   #top{
-      background: url("../video/Fishermen-Resting.jpg") no-repeat center center scroll;
+      background: url("../background/Fishermen-Resting.jpg") no-repeat center center scroll;
   		top: 50%;
   		left:50%;
   		transform: translate(-50%, -50%);
@@ -226,9 +226,6 @@ hr.small {
     font-size: 1.5em;
     padding-bottom: 0.8em;
   }
-  #projects h1{
-    color:black;
-  }
   #projects figcaption{
     background-color: rgba(0,0,0,0.95);
   }
@@ -236,7 +233,7 @@ hr.small {
 
 /* MyLife */
 #mystory{
-  background: url("../video/underwater.jpeg") no-repeat center center scroll;
+  background: url("../background/underwater.jpeg") no-repeat center center scroll;
   background-size: cover;
     display:block;
     height: 100%;
@@ -248,7 +245,7 @@ hr.small {
     overflow: hidden;
     align-items: center;
   }
-#mystory video .background{
+#mystory .background{
   position: absolute;
   top: 49%;
   left:50%;
@@ -522,12 +519,22 @@ hr.small {
 /*Experience */
 #experience{
   background-color: #337ab7;
+  background: url("../background/sky.jpg") no-repeat center center scroll;
+  background-size: cover;
 }
-#experience video.background{
+#experience .background{
+    display:block;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    align-items: center;
   top:48%;
   min-width: 100%;
   min-height: 100%;
-	height: 105%;
+	height: 108%;
 	width:100%;
 	object-fit:cover;
 }
@@ -545,16 +552,6 @@ hr.small {
   #experience figcaption{
     height: 120px;
   }
-}
-@media (max-width:768px) {
-  #experience {
-  /*background: url("../video/up.jpg") no-repeat center center scroll; */
-  min-width: 100%;
-  min-height: 100%;
-  height: 100%;
-  width:100%;
-  object-fit:cover;
-}
 }
 /* Projects/Portfolio */
 
@@ -636,7 +633,20 @@ hr.small {
   font-size: 4.5em;
   font-weight: bold;
 }
-#projects video.background{
+#projects{
+  background-color: #337ab7;
+  background: url("../background/stars.jpg") no-repeat center center scroll;
+  background-size: cover;
+}
+#projects .background{
+  display:block;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+  align-items: center;
   top:49%;
   min-width: 100%;
   min-height: 100%;
@@ -686,11 +696,11 @@ figcaption{
 
 /* Contact-form */
 #contact{
-  background: url("../video/mountain.jpg") no-repeat center center scroll;
+  background: url("../background/mountain.jpg") no-repeat center center scroll;
   background-size: cover;
   height: 100%;
 }
-#contact video .background{
+#contact .background{
   position: absolute;
   top: 50%;
   left:50%;
