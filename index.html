@@ -1,429 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My Personal Website">
-    <meta name="author" content="Brian Nunes De Souza">
-    <link rel="shortcut icon" type="image/png" href="img/profile.png">
-
-    <title>Brian De Souza</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/loader.css">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Animations -->
-    <link rel="stylesheet" href="css/magic-master/magic.css"> <!-- Vanish Effects -->    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <title>Brian DeSouza - Product Manager & Designer</title>
+    <link rel="icon" href="https://via.placeholder.com/32x32.png?text=BD" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .name-gradient {
+            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+        .fade-in.appear {
+            opacity: 1;
+        }
+    </style>
 </head>
-
-<body>
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-85034174-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-    <div id="loader-wrapper">
-			<div id="loader"></div>
-
-			<div class="loader-section section-left"></div>
-            <div class="loader-section section-right"></div>
-		</div>
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-menu fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-menu fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Brian De Souza</a>
-            </li>
-            <li>
-                <a href="#mystory" onclick=$("#menu-close").click();>My Story</a>
-            </li>
-            <li>
-                <a href="#projects" onclick=$("#menu-close").click();>Projects</a>
-            </li>
-            <li>
-                <a href="#experience" onclick=$("#menu-close").click();>Experience</a>
-            </li>
-            <li>
-                <a href="https://drive.google.com/open?id=0B13xVW9DRpH2R3hCUkVHQS0xTms" onclick=$("#menu-close").click(); target="_blank">Resume</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Header -->
-    <div id="loader-wrapper">
-			<div id="loader"></div>
-
-			<div class="loader-section section-left"></div>
-      <div class="loader-section section-right"></div>
-
-		</div>
-
-    <header id="top" class="header">
-            <video class="background" muted="muted" loop="loop" autoplay="autoplay">
-              <source src="background/Fishermen-Resting.mp4" type="video/mp4">
-              <source src="background/Fishermen-Resting.webm" type="video/webm">
-              <source src="background/Fishermen-Resting.ogg" type="video/ogg">
-                Your browser does not support HTML5 video.
-            </video>
-            <div class="text-vertical-center">
-            <h1 >Brian Nunes De Souza</h1>
-            <img id="profile" src="img/profile.png" height="250">
-            <h3 >Brazilian American passionate about<br> developing software to help others</h3>
-            <br>
-            <div class="row mobile-invisible">
-            <a id="intro-button" href="#mystory" class="btn btn-dark btn-lg magic magic-third vanishIn">My Story</a>
-            <a id="intro-button" href="#projects" class="btn btn-dark btn-lg magic magic-fourth vanishIn">Projects</a>
-            <a id="intro-button" href="#experience" class="btn btn-dark btn-lg magic magic-fith vanishIn">Experience</a>
-            <a id="intro-button" href="https://drive.google.com/open?id=0B13xVW9DRpH2R3hCUkVHQS0xTms" class="btn btn-dark btn-lg magic magic-seventh vanishIn" target="_blank">Resume</a>
-            <a id="intro-button" href="#contact" class="btn btn-dark btn-lg magic magic-eighth vanishIn">Contact</a>
-            </div>
-        </div>
+<body class="bg-gray-50">
+    <header class="fixed top-0 left-0 right-0 bg-white bg-opacity-90 backdrop-blur-md shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <ul class="flex justify-center space-x-8">
+                <li><a href="#about" class="nav-link text-gray-600 hover:text-gray-900 transition duration-300">About</a></li>
+                <li><a href="#projects" class="nav-link text-gray-600 hover:text-gray-900 transition duration-300">Recent Projects</a></li>
+                <li><a href="#my-story" class="nav-link text-gray-600 hover:text-gray-900 transition duration-300">My Story</a></li>
+                <li><a href="#contact" class="nav-link text-gray-600 hover:text-gray-900 transition duration-300">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- My Story -->
-    <section class="header" id="mystory">
-      <div id="bubbles">
-        <div class="mystory-container">
-          <div class="mystory-spacing">
-          <div class="mystory-content">
-            <h1 class="title"> My Story </h1>
-            <hr class="small">
-            <h3>Nice to meet you! My name is Brian De Souza. I was born in the U.S but raised in Brazil. When I was 14 years old, I moved back by myself to start my new life in the United States. Although I did not speak English when I arrived, I was able to quickly adapt throughout high school and join the best university in my state. I love to read, think, and learn, but above all, I am most passionate about using my Computer Science skills to help the community and environment.</h3>
-          </div><!-- /.mystory-content -->
-        </div><!-- /.spacing -->
-        </div><!-- /.mystory-container -->
-        <div class="bubbles-container">
-            <div class="bubble x1"></div>
-            <div class="bubble x2"></div>
-            <div class="bubble x3"></div>
-            <div class="bubble x4"></div>
-            <div class="bubble x5"></div>
-            <div class="bubble x6"></div>
-            <div class="bubble x7"></div>
-          </div>
-        </div>
-    </section>
+    <main class="pt-16">
+        <section id="about" class="py-24 gradient-bg text-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <img src="https://media.licdn.com/dms/image/v2/C4D03AQE8XgN3VQKv2A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516284038581?e=1729728000&v=beta&t=0Z6IHH2lCFK-46f1Q2-AkJTq0cS6Vyl_y9jLSu7vhvg" alt="Brian DeSouza" class="rounded-full w-64 h-64 object-cover mx-auto border-4 border-white shadow-lg">
+                    </div>
+                    <div class="md:w-2/3 md:pl-12">
+                        <h1 class="text-6xl font-black mb-4 name-gradient">Brian De Souza</h1>
+                        <h2 class="text-3xl font-bold mb-6">Product Manager @ Microsoft</h2>
+                        <p class="text-xl mb-6 leading-relaxed">
+                            Nice to meet you! I'm passionate about working on products with big ambitions and with potential for impact. I'm currently working as a product manager 2 at Microsoft. I previously lead LiveGreen, a company I co-founded, and graduated with a CS degree from the University of Florida.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition duration-300 inline-block">Download Resume</a>
+                            <a href="#contact" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300 inline-block">Get in Touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Projects -->
-    <section id="projects" class="header portfolio background">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h1 class="title">Projects</h1>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                    <figure>
-                                <a href="http://www.livegreen.io" target="_blank">
-                                    <img class="img-portfolio img-responsive" src="img/livegreen.png">
-                                    <figcaption><h3>LiveGreen</h3>
-                                    <p>iOS app which tracks and helps user reduce carbon emission based on everyday lifestyle. LiveGreen is the further development of the DreamGreen hackathon app. New features include climate news, data map, and product scanner.</p>
-                                    </figcaption>
-                                    </figure>
-                                      </a>
-                            </div>
+        <section id="projects" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-16 text-center">Recent Projects</h2>
+                
+                <!-- LiveGreen Project -->
+                <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden mb-16 transition duration-300 hover:shadow-xl" data-aos="fade-up">
+                    <div class="flex flex-col">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-4">LiveGreen</h3>
+                            <p class="text-gray-600 mb-6">An iOS app empowering users to adopt sustainable habits and support global reforestation efforts.</p>
+                            <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>50,000+ active users</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>80,000+ trees worldwide</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Featured in Apple's 2019 Earth Day</li>
+                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>$25,000 prize winner at University of Florida's business competition</li>
+                            </ul>
+                            <p class="text-sm text-gray-500 mb-4">Technologies: Swift, Core Data, Firebase</p>
+                            <a href="https://livegreen.io/about" class="bg-transparent border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition duration-300 inline-block">Learn More</a>
                         </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                    <figure>
-                                    <a href="https://devpost.com/software/jobfit" target="_blank">
-                                    <img class="img-portfolio img-responsive" src="img/jobfit.png">
-                                    <figcaption><h3>JobFit</h3>
-                                    <p>Ionic app developed at Swamphacks 2017, University of Florida, winner of Best Hack by InfiniteEnergy and 3rd place overall. JobFit connects users’ Facebook accounts, analyze their pictures, and matches them with companies based on cultural fit.</p>
-                                    </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                    <figure>
-                                    <a href="https://devpost.com/software/saveitwhilewecan">
-                                    <img class="img-portfolio img-responsive" src="img/dreamgreen.png">
-                                    <figcaption><h3>DreamGreen</h3>
-                                    <p>Android app developed at HackDuke 2016, Duke University, winner of Best use of Facebook API. DreamGreen estimates how much emission users generate and score them on how eco friendly they are based on daily consumption and lifestyle. </p>
-                                    </figcaption>
-                                    </figure>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                    <figure>
-                                    <img class="img-portfolio img-responsive" src="img/foodforchange.png">
-                                    <figcaption><h3>Food for Change</h3>
-                                    <p>Android app developed at CodeRed 2016, University of Houston, winner of Best Health Hack and 3rd place overall. FoodForChange estimates how much emission users generate and score them on how eco friendly they are based on daily consumption and lifestyle. </p>
-                                    </figcaption>
-                                    </figure>
+                        <div class="p-8">
+                            <div class="overflow-x-auto relative">
+                                <img src="img/swipe.png" alt="Swipe Icon" class="absolute left-6 top-4 h-6 w-6 opacity-50">
+                                <div class="flex space-x-4 min-w-max">
+                                    <div class="w-[30vh] h-[calc(19.5/9*30vh)] bg-white bg-center bg-no-repeat bg-cover rounded-lg shadow-md" style="background-image: url('img/appStoreOneBig.png');"></div>
+                                    <div class="w-[30vh] h-[calc(19.5/9*30vh)] bg-white bg-center bg-no-repeat bg-cover rounded-lg shadow-md" style="background-image: url('img/appStoreTreesBig.png');"></div>
+                                    <div class="w-[30vh] h-[calc(19.5/9*30vh)] bg-white bg-center bg-no-repeat bg-cover rounded-lg shadow-md" style="background-image: url('img/appStoreNeutralBig.png');"></div>
+                                    <div class="w-[30vh] h-[calc(19.5/9*30vh)] bg-white bg-center bg-no-repeat bg-cover rounded-lg shadow-md" style="background-image: url('img/Reduce-lg.png');"></div>
+                                    <div class="w-[30vh] h-[calc(19.5/9*30vh)] bg-white bg-center bg-no-repeat bg-cover rounded-lg shadow-md" style="background-image: url('img/AppStoreFive-lg.png');"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /.row (nested) -->
                 </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <section id="experience" class="header portfolio background">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h1 class="title">Experience</h1>
-                    <hr class="small">
-                    <h3> Software Positions</h3>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="portfolio-item">
-                              <figure>
-                              <div class="portfolio-item-aggregator">
-                              <img class="img-portfolio" src="img/aggregator.jpg">
-                              </div>
-                              <figcaption>
-                              <h3>Software Team Member</h3>
-                              Under training to develop software for AggreGator team of 2017-2018. Developed Arduino robot with autonomous and obstacle avoidance capabilities. Currently learning C++.</figcaption>
-                              </figure>
-                            </div>
-                        </div>
-                        <div class="col-md-4 ">
-                          <div class="portfolio-item">
-                          <figure>
-                            <div class="portfolio-item-livegreenlogo">
-                          <img class="img-portfolio portfolio-item-livegreenlogo" src="img/livegreenteam.jpg">
-                          </div>
-                          <figcaption>
-                          <h3>Lead Software Developer and Researcher</h3>
-                          Develop algorithms and conduct research responsible for calculating carbon emissions. Lead web and app software team.</figcaption>
-                          </figure>
-                        </div>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="portfolio-item">
-                          <figure>
-                          <div class="portfolio-item-zeroroboticslogo">
-                          <img class="img-portfolio portfolio-item-zeroroboticslogo" src="img/zerorobotics.png">
-                          </div>
-                          <figcaption>
-                           <h3>Software Team Leader</h3>
-                           Led software team of Zero Robotics 2014 -2015 International High School Competition. Designed programming strategies and selected software members.</figcaption>
-                           </figure>
-                        </div>
-                      </div> <!-- Row Closes -->
 
-                      <div class="row">
-                        <h3>Hackathons</h3>
-
-                            <div class="col-md-4">
-                              <div class="portfolio-item">
-                              <figure>
-                                <div class="portfolio-item-swamplogo">
-                                <img class="img-portfolio portfolio-item-swamplogo" src="img/swampwin.jpg">
-                                </div>
-                                <figcaption>
-                                <h3>Best Hack by Infinite Energy and 3rd Place</h3>
-                                Designed algorithms and conducted small research with sponsors to calculate cultural fit match and understand their workplace environment.</figcaption>
-                                </figure>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                <div class="portfolio-item ">
-                                  <figure>
-                                <div class="portfolio-item-hackdukelogo">
-                                <img class="img-portfolio portfolio-item-hackdukelogo" src="img/dukewin.jpg">
-                                </div>
-                                <figcaption>
-                                <h3>Best Use of Facebook API</h3>
-                                Designed algorithms which estimate emissions and ecological score, collected data for formulas, and developed the idea behing the app. </figcaption>
-                                </figure>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="portfolio-item">
-                                          <figure>
-                                <div class="portfolio-item-coderedlogo">
-                                <img class="img-portfolio" src="img/coderedwin.jpg">
-                                </div>
-                                <figcaption>
-                                <h3>Best Hack by Infinite Energy and 3rd Place</h3>
-                                Designed algorithms and conducted small research with sponsors to calculate cultural fit match and understand their workplace environment.</figcaption>
-                                </figure>
-                                </div>
-                            </div>
-
+                <!-- Other Projects -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Project 2</h3>
+                            <p class="text-gray-600 mb-4">Brief description of another significant project.</p>
+                        </div>
+                        <img class="h-48 w-full object-cover" src="https://via.placeholder.com/300x200.png?text=Project+2" alt="Project 2">
                     </div>
-                      <!-- /.row (education row) -->
-                  </div>
-                    <!-- /.row (main row) -->
+                    <div class="bg-gray-100 rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl" data-aos="fade-up" data-aos-delay="400">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Project 3</h3>
+                            <p class="text-gray-600 mb-4">Brief description of a third significant project.</p>
+                        </div>
+                        <img class="h-48 w-full object-cover" src="https://via.placeholder.com/300x200.png?text=Project+3" alt="Project 3">
+                    </div>
                 </div>
-                <!-- /.col-lg-10 -->
             </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <section class="header portfolio" id="contact">
-      <div class="container">
-          <div class="row">
-                <h1 class="title">Contact</h1>
-                <hr class="small">
-                    <form role="form" action="https://formspree.io/brian.nunes.souza@gmail.com" method="POST">
-                      <h1 style="font-weight:bold">I'm excited to hear from you!</h1>
-                      <div class="form-group contact-form">
-                          <div class="formtxt">Full Name:*</div><input id="contact-form-name" type="text" class="form-control" name="Full Name: " placeholder="Enter Name" style="margin-bottom:0.5em;">
-                          <div class="formtxt">Company/Organization:</div><input id="contact-form-name" type="text" class="form-control" name="Company: " placeholder="Enter Company" style="margin-bottom:0.5em;">
-                          <div class="formtxt">Email:*</div><input id="contact-form-email" type="email" class="form-control" placeholder="Enter Email" name="From: " style="margin-bottom:0.5em;">
-                          <div class="formtxt">Message:*</div><textarea id="contact-form-message" class="form-control" name="Message: " rows="3" placeholder="Enter Message"></textarea>
-                      </div>
-                        <input type="text" name="_gotcha" style="display:none" />
-                        <input type="hidden" name="_subject" value="New submission!" />
-                      <button type="submit" id="formbtn" class="btn btn-primary btn-lg" target="_blank">Send</button>
-                    </form>
+        <section id="my-story" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-in">My Story</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4" data-aos="fade-in">From Brazil to the USA</h3>
+                        <p class="text-gray-700 mb-4" data-aos="fade-in">At the age of 14, I embarked on a life-changing journey, moving from Brazil to the United States on my own. This experience shaped my resilience, adaptability, and drive to succeed in new environments.</p>
+                        <p class="text-gray-700 mb-6" data-aos="fade-in">My background has given me a unique perspective on product development, allowing me to approach challenges with a global mindset and create solutions that resonate across cultures.</p>
+                        <h4 class="text-xl font-semibold mb-2" data-aos="fade-in">Education & Achievements:</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2" data-aos="fade-in">
+                            <li>Bachelor of Science in Computer Science, University of Florida</li>
+                            <li>First Place, UF Hackathon 2018</li>
+                            <li>Best Use of AI, TechCrunch Disrupt Hackathon 2019</li>
+                            <li>Innovation Award, Google Developer Student Club Hackathon 2020</li>
+                        </ul>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://via.placeholder.com/300x200.png?text=Brazil" alt="Brazil" class="rounded-lg shadow-md" data-aos="fade-in">
+                        <img src="https://via.placeholder.com/300x200.png?text=USA" alt="USA" class="rounded-lg shadow-md" data-aos="fade-in">
+                        <img src="https://via.placeholder.com/300x200.png?text=University" alt="University" class="rounded-lg shadow-md" data-aos="fade-in">
+                        <img src="https://via.placeholder.com/300x200.png?text=Hackathon" alt="Hackathon" class="rounded-lg shadow-md" data-aos="fade-in">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (561) 929-4363</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:brian.nunes.souza@gmail.com" target="_blank">brian.nunes.souza@gmail.com</a>
-                        </li>
-                    </ul>
-                    <br>
+        <section id="contact" class="py-24 gradient-bg text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-12" data-aos="fade-up">Get in Touch</h2>
+                <p class="text-2xl mb-8" data-aos="fade-up" data-aos-delay="200">Let's collaborate on creating innovative digital experiences!</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="mailto:your.email@example.com" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition duration-300 inline-flex items-center" data-aos="fade-up" data-aos-delay="400">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                        Email
+                    </a>
+                    <a href="#" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition duration-300 inline-flex items-center" data-aos="fade-up" data-aos-delay="600">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path></svg>
+                        Download Resume
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition duration-300 inline-flex items-center" data-aos="fade-up" data-aos-delay="800">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path></svg>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://www.facebook.com/briannunesdesouza" target="_blank"><i class="fa fa-facebook fa-fw fa-4x"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/briandesouza" target="_blank"><i class="fa fa-github fa-fw fa-4x"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/briannunesdesouza" target="_blank"><i class="fa fa-linkedin fa-fw fa-4x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Developed by Brian Nunes De Souza</p>
-        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
-      </div>
-      </div>
-
-    </section>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Loader JavaScript -->
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-	   <script src="js/main.js"></script>
-
-    <!-- Background-MyStory JavaScript
-    <script src="js/background.js"></script>
-
-    <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-    // Disable Google Maps scrolling
-    // See http://stackoverflow.com/a/25904582/1607849
-    // Disable scroll zooming and bind back the click event
-    var onMapMouseleaveHandler = function(event) {
-        var that = $(this);
-        that.on('click', onMapClickHandler);
-        that.off('mouseleave', onMapMouseleaveHandler);
-        that.find('iframe').css("pointer-events", "none");
-    }
-    var onMapClickHandler = function(event) {
-            var that = $(this);
-            // Disable the click handler until the user leaves the map area
-            that.off('click', onMapClickHandler);
-            // Enable scrolling zoom
-            that.find('iframe').css("pointer-events", "auto");
-            // Handle the mouse leave event
-            that.on('mouseleave', onMapMouseleaveHandler);
-        }
-        // Enable map zooming with mouse scroll when the user clicks the map
-    $('.map').on('click', onMapClickHandler);
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
     </script>
-
 </body>
-
 </html>
