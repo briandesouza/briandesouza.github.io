@@ -143,23 +143,11 @@
         .typewriter-cursor::after {
             content: '|';
             animation: blink 0.7s infinite;
+            opacity: 0;
         }
         @keyframes blink {
-            0% { opacity: 0; }
+            0%, 100% { opacity: 0; }
             50% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-        .content-wrapper {
-            position: relative;
-            z-index: 2;
         }
     </style>
 </head>
@@ -188,27 +176,25 @@
     </header>
 
     <main class="pt-16">
-        <section id="about" class="py-16 sm:py-24 gradient-bg text-white fade-in relative overflow-hidden">
-            <div id="particles-js"></div>
-            <div class="content-wrapper">
-                <div class="container mx-auto px-4 sm:px-6">
-                    <div class="flex flex-col md:flex-row items-center justify-between mb-12">
-                        <div class="md:w-1/3 mb-8 md:mb-0">
-                            <img src="https://media.licdn.com/dms/image/v2/C4D03AQE8XgN3VQKv2A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516284038581?e=1729728000&v=beta&t=0Z6IHH2lCFK-46f1Q2-AkJTq0cS6Vyl_y9jLSu7vhvg" alt="Brian DeSouza" class="rounded-full w-48 h-48 sm:w-64 sm:h-64 object-cover mx-auto border-4 border-white shadow-lg">
+        <section id="about" class="py-16 sm:py-24 gradient-bg text-white fade-in">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="flex flex-col md:flex-row items-center justify-between mb-12">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <img src="https://media.licdn.com/dms/image/v2/C4D03AQE8XgN3VQKv2A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516284038581?e=1729728000&v=beta&t=0Z6IHH2lCFK-46f1Q2-AkJTq0cS6Vyl_y9jLSu7vhvg" alt="Brian DeSouza" class="rounded-full w-48 h-48 sm:w-64 sm:h-64 object-cover mx-auto border-4 border-white shadow-lg">
+                    </div>
+                    <div class="md:w-2/3 md:pl-12">
+                        <h1 class="text-4xl sm:text-6xl font-black mb-4 name-color">Brian De Souza</h1>
+                        <h2 class="text-2xl sm:text-3xl font-bold mb-6">Product Manager @ Microsoft</h2>
+                        <div id="typewriter-container" class="text-lg sm:text-xl mb-6 leading-relaxed">
+                            <p id="typewriter-text" class="typewriter-cursor"></p>
+                            <p id="hidden-text" class="invisible absolute">Hey there! 👋 I am a product manager obsessed with creating experiences users can't live without. At Microsoft, I'm driving adoption of Copilot AI subscriptions. Previously, I co-founded LiveGreen, growing it from a hackathon idea to 50,000+ active users. I am seeking opportunities to build AI products that solve real-world problems and delight users.</p>
                         </div>
-                        <div class="md:w-2/3 md:pl-12">
-                            <h1 class="text-4xl sm:text-6xl font-black mb-4 name-color">Brian De Souza</h1>
-                            <h2 class="text-2xl sm:text-3xl font-bold mb-6">Product Manager @ Microsoft</h2>
-                            <div id="typewriter-container" class="text-lg sm:text-xl mb-6 leading-relaxed">
-                                <p id="typewriter-text" class="typewriter-cursor"></p>
-                            </div>
-                            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                                <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                                <a href="Brian De Souza - Resume.pdf" class="btn btn-secondary" download>
-                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path></svg>
-                                    Download Resume
-                                </a>
-                            </div>
+                        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                            <a href="Brian De Souza - Resume.pdf" class="btn btn-secondary" download>
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path></svg>
+                                Download Resume
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -258,8 +244,18 @@
                             <h3 class="text-2xl font-semibold text-gray-800 mb-4">StoryPath, AI Game Creator</h3>
                             <p class="text-gray-600 mb-6">Developing an iOS app that allows users to create choose-your-own-adventure games using text and image generative AI models.</p>
                             <ul class="text-sm text-gray-600 mb-6 space-y-2">
-                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Innovative use of AI for game creation</li>
-                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Ongoing development since 2024</li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                    AI-powered story generation
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                    AI-generated images for scenes
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Interactive decision-making
+                                </li>
                             </ul>
                             <a href="https://briandesouza.me/storypath" class="btn btn-outline">Learn More</a>
                         </div>
@@ -276,8 +272,18 @@
                             <h3 class="text-2xl font-semibold text-gray-800 mb-4">Forest Card, Green Banking App</h3>
                             <p class="text-gray-600 mb-6">Launched a beta program for a debit card that planted trees using transactional fees and savings' interest rates. Developed in partnership with Galileo Financial Technologies.</p>
                             <ul class="text-sm text-gray-600 mb-6 space-y-2">
-                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Innovative green banking solution</li>
-                                <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Developed in 2020</li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
+                                    Tree planting from transactions
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Eco-friendly savings interest
+                                </li>
+                                <li class="flex items-center">
+                                    <svg class="w-5 h-5 mr-2 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    Partnership with Galileo Financial
+                                </li>
                             </ul>
                             <a href="https://briandesouza.me/forestcard" class="btn btn-outline">Learn More</a>
                         </div>
@@ -442,54 +448,28 @@
             if (i < text.length) {
                 textElement.innerHTML += text.charAt(i);
                 i++;
-                setTimeout(() => typeWriter(textElement, text, i), 20); // Adjust the 20 to change typing speed
+                let delay = Math.random() * 15 + 15; // Random delay between 30ms and 80ms
+                setTimeout(() => typeWriter(textElement, text, i), delay);
+            } else {
+                textElement.classList.add('typewriter-cursor');
             }
         }
 
         // Start the typewriter effect when the page loads
         window.addEventListener('load', () => {
             const typewriterElement = document.getElementById('typewriter-text');
+            const hiddenTextElement = document.getElementById('hidden-text');
             const typewriterContainer = document.getElementById('typewriter-container');
-            const messages = [
-                "Hey there! 👋",
-                "I'm a product manager obsessed with creating experiences users can't live without.",
-                "At Microsoft, I'm driving adoption of Copilot AI subscriptions.",
-                "Previously, I co-founded LiveGreen, growing it from a hackathon idea to 50,000+ active users.",
-                "I am seeking opportunities to build AI products that solve real-world problems and delight users."
-            ];
-            
-            let currentMessageIndex = 0;
-            let currentMessage = messages[currentMessageIndex];
-            let currentCharIndex = 0;
-            
-            function typeNextMessage() {
-                if (currentCharIndex < currentMessage.length) {
-                    typewriterElement.innerHTML += currentMessage.charAt(currentCharIndex);
-                    currentCharIndex++;
-                    setTimeout(typeNextMessage, 20); // Adjust the 20 to change typing speed
-                } else {
-                    setTimeout(eraseCurrentMessage, 1000); // Wait for 1 second before erasing
-                }
-            }
-            
-            function eraseCurrentMessage() {
-                if (currentCharIndex > 0) {
-                    currentMessage = currentMessage.slice(0, -1);
-                    typewriterElement.innerHTML = currentMessage;
-                    currentCharIndex--;
-                    setTimeout(eraseCurrentMessage, 20); // Adjust the 20 to change erasing speed
-                } else {
-                    currentMessageIndex = (currentMessageIndex + 1) % messages.length;
-                    currentMessage = messages[currentMessageIndex];
-                    setTimeout(typeNextMessage, 500); // Wait for 0.5 seconds before typing the next message
-                }
-            }
+            const text = hiddenTextElement.textContent;
             
             // Set the height of the container to match the height of the hidden text
-            typewriterContainer.style.height = `${typewriterElement.scrollHeight}px`;
+            typewriterContainer.style.height = `${hiddenTextElement.offsetHeight}px`;
             
-            // Start the typewriter effect
-            typeNextMessage();
+            // Clear the initial text and start the typewriter effect after a short delay
+            typewriterElement.textContent = '';
+            setTimeout(() => {
+                typeWriter(typewriterElement, text);
+            }, 1000); // 1 second delay before starting
         });
 
         // Fade-in effect
@@ -505,24 +485,6 @@
         const fadeElements = document.querySelectorAll('.fade-in');
         const observer = new IntersectionObserver(handleIntersection);
         fadeElements.forEach(el => observer.observe(el));
-
-        // Initialize particles.js
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#ffffff" },
-                opacity: { value: 0.5, random: false },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 2, direction: "none", random: false, straight: false, out_mode: "out", bounce: false }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
-                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
-            },
-            retina_detect: true
-        });
     </script>
 </body>
 </html>
