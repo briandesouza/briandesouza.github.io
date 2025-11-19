@@ -1,0 +1,328 @@
+.home {
+    width: 100%;
+    overflow: hidden;
+}
+
+.section {
+    padding: 6rem 0;
+}
+
+.container {
+    max-width: 1100px;
+    /* Slightly narrower for better readability */
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Styles - Split Layout */
+.hero {
+    min-height: 90vh;
+    /* Not full screen, feels more organic */
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 6rem;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    color: var(--color-text-primary);
+}
+
+.highlight {
+    color: var(--color-accent);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.hero-bio {
+    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    max-width: 90%;
+}
+
+.hero-bio strong {
+    color: var(--color-text-primary);
+    font-weight: 600;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 100px;
+    /* Pill shape */
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.btn-primary {
+    background: var(--color-text-primary);
+    color: var(--color-bg-primary);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-text-primary);
+    border: 1px solid var(--glass-border);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-text-secondary);
+}
+
+/* Hero Image */
+.hero-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    /* Rounded square looks more modern than circle */
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: rotate(3deg);
+    /* Playful tilt */
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.hero-image-blob {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: var(--gradient-primary);
+    filter: blur(60px);
+    opacity: 0.3;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+/* Projects Grid */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 1rem;
+    display: inline-block;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--color-bg-secondary);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.plotwist-bg {
+    background-image: linear-gradient(45deg, #ff0055, #000066);
+}
+
+.visionboard-bg {
+    background-image: linear-gradient(45deg, #ff9a9e, #fad0c4);
+}
+
+.livegreen-bg {
+    background-image: linear-gradient(45deg, #10b981, #064e3b);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-weight: 600;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-primary);
+}
+
+.project-content p {
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 100px;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--glass-border);
+}
+
+/* Timeline */
+.timeline {
+    border-left: 2px solid var(--glass-border);
+    margin-left: 0.5rem;
+    padding-left: 2rem;
+}
+
+.timeline-item {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.6rem;
+    top: 0.4rem;
+    width: 1rem;
+    height: 1rem;
+    background: var(--color-bg-primary);
+    border: 2px solid var(--color-text-secondary);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.timeline-item:hover::before {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.25rem;
+    font-family: var(--font-mono);
+}
+
+.timeline-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-text-primary);
+}
+
+.company {
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.timeline-content p:last-child {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image-wrapper {
+        order: 1;
+    }
+
+    .hero-bio {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
