@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Compass, Layers, Target, RefreshCw, Sparkles } from 'lucide-react';
+import { ArrowLeft, Compass, Layers, Target, RefreshCw, Sparkles, Smartphone, Zap, Database, Cloud, Code, Users, MessageSquare, BookOpen, Gamepad2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './CaseStudy.css';
 
@@ -9,13 +9,13 @@ const Plotwist = () => {
             {/* Hero */}
             <header className="cs-hero">
                 <div className="container">
-                    <Link to="/" className="back-link"><ArrowLeft size={20} /> Back to Home</Link>
+                    <Link to="/" className="back-link"><ArrowLeft size={18} /> Back to Home</Link>
                     <h1 className="cs-title">Plotwist</h1>
-                    <p className="cs-subtitle">Interactive fiction designed for how people consume content today</p>
+                    <p className="cs-subtitle">Interactive fiction designed for the TikTok generation. Vertical scrolling, rich media, and instant gratification.</p>
                     <div className="cs-tags">
                         <span>0-to-1 Product</span>
                         <span>iOS Development</span>
-                        <span>Currently in TestFlight</span>
+                        <span>TestFlight Beta</span>
                     </div>
                     <div className="cs-hero-cover">
                         <img src="/img/plotwist-cover.png" alt="Plotwist preview" />
@@ -26,195 +26,211 @@ const Plotwist = () => {
 
             {/* Content */}
             <div className="container cs-content">
+
+                {/* The Spark / Narrative */}
                 <section className="cs-section">
-                    <h2>Overview</h2>
-                    <p>
-                        Plotwist is a 0-to-1 iOS product that brings interactive fiction to a mobile-first audience. Think choose-your-own-adventure
-                        stories, but built for how people consume content today—vertical scrolling, rich media, and instant gratification.
+                    <h2>The Spark</h2>
+                    <p className="editorial-text">
+                        I've always loved branching narratives—games like <em>Fallout: New Vegas</em> where your choices genuinely matter.
+                        But on mobile, the genre felt stuck in 2010. Apps like <em>Episode</em> or <em>Choices</em> felt clunky,
+                        with slow loading screens between every decision and art styles that felt generic.
                     </p>
-                    <p>
-                        I'm building this solo and currently in TestFlight. Like VisionBoardAI, there's no usage
-                        data to rely on yet, so I'm using user research, rapid iteration, and hypothesis testing to find the right product experience.
+                    <div className="editorial-quote">
+                        "Why does reading a story on my phone feel like browsing a PDF, when it should feel like playing a game?"
+                    </div>
+                    <p className="editorial-text">
+                        I built Plotwist to bridge that gap. I wanted to create a platform where stories flow as smoothly as a TikTok feed,
+                        where choices are instant, and where anyone can create a complex branching narrative without writing a single line of code.
                     </p>
                 </section>
 
+                {/* Target Audience / Personas */}
                 <section className="cs-section">
-                    <h2>Problem Discovery</h2>
-                    <p>
-                        I've always loved branching narrative experiences, particularly <em>Fallout New Vegas</em> and how it let players shape their story through choices.
-                        Looking at the mobile space, I noticed apps like <em>Episode</em>, <em>Hooked</em>, and <em>Choices</em> have millions of downloads on the App Store—
-                        clear proof of demand for mobile storytelling. But none of them offer true user-generated content or give users full control over branching narratives.
-                        That gap became my hypothesis for Plotwist.
-                    </p>
-                    <p>
-                        I talked to 10+ people who play or create interactive fiction: writers, indie game developers, tabletop RPG fans, and Gen Z readers.
-                        Two clear pain points emerged:
-                    </p>
+                    <h2>Target Audience</h2>
                     <div className="grid-2">
-                        <div className="cs-card">
-                            <h3>For Players</h3>
+                        <div className="persona-card">
+                            <div className="persona-header">
+                                <div className="persona-icon">
+                                    <Smartphone size={24} />
+                                </div>
+                                <div className="persona-name">The Story Snacker</div>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Who:</strong>
+                                <span>Gen Z (18-24), grew up on Webtoons and mobile games.</span>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Behavior:</strong>
+                                <span>Reads in 5-minute bursts. Hates friction. Will drop an app if it doesn't load instantly.</span>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Pain:</strong>
+                                <span>Existing IF apps feel slow and dated. "I don't want to read a wall of text."</span>
+                            </div>
+                        </div>
+
+                        <div className="persona-card">
+                            <div className="persona-header">
+                                <div className="persona-icon">
+                                    <BookOpen size={24} />
+                                </div>
+                                <div className="persona-name">The World Builder</div>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Who:</strong>
+                                <span>Aspiring writers, D&D DMs, fanfiction creators.</span>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Behavior:</strong>
+                                <span>Has amazing ideas but gets stuck on the technical execution of branching logic.</span>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Pain:</strong>
+                                <span>Tools like Twine are too technical. "I just want to write, not debug code."</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Overview Bento */}
+                <section className="cs-section">
+                    <h2>The Solution</h2>
+                    <div className="bento-grid">
+                        <div className="bento-item large">
+                            <div className="bento-icon">
+                                <Zap size={24} />
+                            </div>
+                            <h3>Zero-Latency Reading</h3>
                             <p>
-                                Existing IF apps feel like reading a PDF with hyperlinks. They're missing the polish and ease that mobile users expect—
-                                smooth scrolling, rich media, and instant loading. People want the depth of branching narratives without the friction.
+                                Plotwist uses a custom prefetching engine. While you read one node, the app generates the next 3 possible branches in the background.
+                                The result? Zero loading screens. Choices feel instant.
                             </p>
                         </div>
-                        <div className="cs-card">
-                            <h3>For Creators</h3>
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <Users size={24} />
+                            </div>
+                            <h3>Solo Built</h3>
                             <p>
-                                Creating interactive stories is incredibly time-consuming. Writers have to manually map every choice tree,
-                                write thousands of words, and either learn Twine/Ink or use limited no-code tools. There's no way to quickly prototype an idea.
+                                I'm handling everything: user research, product strategy, iOS engineering, and backend infrastructure.
                             </p>
                         </div>
                     </div>
                 </section>
 
+                {/* Problem / Solution Comparison */}
                 <section className="cs-section">
-                    <h2>Target Users & Personas</h2>
-                    <p>
-                        Through research and early TestFlight feedback, I've identified two core personas:
-                    </p>
-                    <div className="grid-2">
-                        <div className="cs-card">
-                            <h3>The Story Snacker</h3>
-                            <p><strong>Who:</strong> 18-28 years old, grew up on TikTok, Webtoons, and mobile games</p>
-                            <p><strong>Behavior:</strong> Wants entertainment that's deeper than scrolling but shorter than sitting down with a console or book</p>
-                            <p><strong>Need:</strong> Quick, polished, interactive experiences that respect their time and feel native to mobile</p>
-                            <p><strong>Current alternatives:</strong> Episode, Choices, Romance Club, but those feel dated and have limited branching</p>
+                    <h2>The Problem</h2>
+                    <div className="comparison-grid">
+                        <div className="comparison-col">
+                            <h3 className="pain">Old School IF</h3>
+                            <ul className="comparison-list">
+                                <li>Feels like reading a PDF with links</li>
+                                <li>Slow, clunky web interfaces</li>
+                                <li>Walls of text, no visuals</li>
+                                <li>Hard to create without coding</li>
+                            </ul>
                         </div>
-                        <div className="cs-card">
-                            <h3>The Aspiring Creator</h3>
-                            <p><strong>Who:</strong> Writers, game design students, tabletop RPG enthusiasts with story ideas</p>
-                            <p><strong>Behavior:</strong> Has narrative concepts but lacks the time or technical skills to build full branching stories</p>
-                            <p><strong>Need:</strong> A way to prototype story ideas quickly and share them without learning Twine or hiring a dev</p>
-                            <p><strong>Current alternatives:</strong> Twine, Ink, Ren'Py—all require learning syntax and are intimidating for non-technical creators</p>
-                        </div>
-                    </div>
-                    <h3 style={{ marginTop: '2rem' }}>Core Hypotheses</h3>
-                    <p>
-                        Based on these personas, I'm testing three key hypotheses:
-                    </p>
-                    <ul>
-                        <li><strong>Mobile-native UI drives engagement:</strong> If the reading experience feels as smooth as TikTok or Instagram Stories, people will finish stories at higher rates.</li>
-                        <li><strong>AI-assisted creation lowers barriers:</strong> If creators can describe a premise and get a playable story in minutes, more people will experiment with creating.</li>
-                        <li><strong>Zero perceived latency matters:</strong> If choices feel instant (no loading spinners), the experience feels more like a game than a chatbot.</li>
-                    </ul>
-                </section>
-
-                <section className="cs-section">
-                    <h2>Product Approach & Development</h2>
-                    <p>
-                        I'm handling all aspects of this product: research, strategy, design, iOS development, and backend infrastructure.
-                        This gives me complete control and lets me iterate quickly based on what I learn from testers.
-                    </p>
-                    <h3 style={{ marginTop: '2rem' }}>How I'm Working</h3>
-                    <div className="feature-grid">
-                        <div className="feature-item">
-                            <Compass className="feature-icon" />
-                            <h4>Bi-Weekly TestFlight Releases</h4>
-                            <p>
-                                Every two weeks, I ship a new build focused on testing 1-2 hypotheses. After each release, I interview
-                                5-10 users to understand what worked, what didn't, and what to prioritize next.
-                            </p>
-                        </div>
-                        <div className="feature-item">
-                            <Layers className="feature-icon" />
-                            <h4>SwiftUI + Combine</h4>
-                            <p>
-                                The entire app is built in SwiftUI with Combine for reactive state management. I use Cursor and Claude
-                                to help with boilerplate, but I write and review all the code myself.
-                            </p>
-                        </div>
-                        <div className="feature-item">
-                            <Target className="feature-icon" />
-                            <h4>Paper Prototyping First</h4>
-                            <p>
-                                Before building any major feature, I prototype it on paper or in Figma and test it with 3-5 people.
-                                This saves weeks of development time on ideas that wouldn't work.
-                            </p>
+                        <div className="comparison-col">
+                            <h3 className="solution">Plotwist</h3>
+                            <ul className="comparison-list">
+                                <li>Native iOS gestures & haptics</li>
+                                <li>Instant choice loading (prefetching)</li>
+                                <li>Immersive audio & AI imagery</li>
+                                <li>No-code creator tools</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
 
+                {/* Tech Stack */}
                 <section className="cs-section">
-                    <h2>Technical Decisions</h2>
-                    <p>
-                        The tech stack is designed to solve one critical product problem: make interactive fiction feel instant.
-                        If there's a loading spinner after every choice, it feels like a chatbot. If choices are instant, it feels like a game.
-                    </p>
-                    <h3 style={{ marginTop: '2rem' }}>Architecture</h3>
-                    <ul>
-                        <li><strong>SwiftUI + Combine:</strong> Native iOS development for the best performance and animations. Combine handles state management and ensures the UI is always in sync.</li>
-                        <li><strong>Firebase for backend:</strong> Firestore stores stories and user progress, Firebase Auth handles accounts, and Cloud Storage holds images/audio files.</li>
-                        <li><strong>Cloudflare Workers as proxy:</strong> All AI requests (text generation, image creation, audio) go through Workers to keep API keys secure and add rate limiting.</li>
-                    </ul>
-                    <h3 style={{ marginTop: '2rem' }}>The Prefetching System</h3>
-                    <p>
-                        This is the key innovation that makes Plotwist feel different from chat-based story apps:
-                    </p>
-                    <ul>
-                        <li><strong>Deterministic generation:</strong> While you're reading a story node, the app pre-generates all possible next choices in the background—text, images, and audio narration.</li>
-                        <li><strong>Zero perceived latency:</strong> When you tap a choice, the next scene loads instantly because it's already been fetched and cached locally.</li>
-                        <li><strong>Smart prefetching:</strong> The system predicts which branches are most likely based on the story structure and prioritizes those for generation.</li>
-                    </ul>
-                    <h3 style={{ marginTop: '2rem' }}>AI Model Strategy</h3>
-                    <ul>
-                        <li><strong>Text generation:</strong> Using OpenRouter and Fireworks to access models like Claude and GPT-4. Testing which models produce the best narrative coherence.</li>
-                        <li><strong>Image generation:</strong> Fal and Replicate for story cover art and scene illustrations. Focused on speed over quality since images need to generate in under 3 seconds.</li>
-                        <li><strong>Audio narration:</strong> ElevenLabs for text-to-speech. Still experimental—testing whether users actually want audio or if it's distracting.</li>
-                    </ul>
-                    <h3 style={{ marginTop: '2rem' }}>Why These Choices Matter</h3>
-                    <p>
-                        The prefetching system is what makes this product viable. Without it, every choice would require a 5-10 second wait,
-                        which kills immersion. By pre-generating content, I can deliver an experience that feels more like a visual novel than a chatbot.
-                        This is only possible because I control the entire stack and can optimize for this specific use case.
-                    </p>
+                    <h2>Tech Stack</h2>
+                    <p>Built for speed and native feel.</p>
+                    <div className="tech-stack-grid">
+                        <div className="tech-item">
+                            <Code className="tech-icon" size={24} />
+                            <div className="tech-name">SwiftUI</div>
+                        </div>
+                        <div className="tech-item">
+                            <Zap className="tech-icon" size={24} />
+                            <div className="tech-name">Combine</div>
+                        </div>
+                        <div className="tech-item">
+                            <Database className="tech-icon" size={24} />
+                            <div className="tech-name">Firebase</div>
+                        </div>
+                        <div className="tech-item">
+                            <Cloud className="tech-icon" size={24} />
+                            <div className="tech-name">Cloudflare Workers</div>
+                        </div>
+                        <div className="tech-item">
+                            <Sparkles className="tech-icon" size={24} />
+                            <div className="tech-name">OpenRouter AI</div>
+                        </div>
+                    </div>
                 </section>
 
+                {/* Key Features Bento */}
                 <section className="cs-section">
-                    <h2>Current Experiments & Next Steps</h2>
-                    <p>
-                        Right now I'm focused on validating the core experience and understanding which features drive engagement.
-                        No growth experiments yet—just learning and iteration.
-                    </p>
-                    <h3 style={{ marginTop: '2rem' }}>Active Experiments</h3>
-                    <div className="feature-grid">
-                        <div className="feature-item">
-                            <RefreshCw className="feature-icon" />
-                            <h4>Creator Onboarding</h4>
+                    <h2>Core Features</h2>
+                    <div className="bento-grid-3">
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <Smartphone size={24} />
+                            </div>
+                            <h3>Vertical Scroll</h3>
                             <p>
-                                Testing different onboarding flows for creators: guided templates vs. free-form prompts vs. genre-based starters.
-                                Hypothesis: most people need structure to get started, not a blank canvas.
+                                A familiar, TikTok-style interface makes reading feel modern and intuitive.
                             </p>
                         </div>
-                        <div className="feature-item">
-                            <Sparkles className="feature-icon" />
-                            <h4>Story Discovery</h4>
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <Sparkles size={24} />
+                            </div>
+                            <h3>AI Asset Gen</h3>
                             <p>
-                                Testing how users find stories to read: algorithmic feed vs. genre browse vs. trending lists.
-                                Measuring completion rates for each discovery method.
+                                Stories automatically get cover art and scene visuals generated by custom Stable Diffusion models.
                             </p>
                         </div>
-                        <div className="feature-item">
-                            <Target className="feature-icon" />
-                            <h4>Multiplayer Storytelling</h4>
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <MessageSquare size={24} />
+                            </div>
+                            <h3>Branching Logic</h3>
                             <p>
-                                Exploring whether people want to experience stories with friends—one person "directs" while others make choices together.
-                                Very early experiment based on D&D/tabletop RPG insights.
+                                Complex state tracking (inventory, relationships) hidden behind a simple swipe interface.
                             </p>
                         </div>
                     </div>
-                    <h3 style={{ marginTop: '2rem' }}>What Success Looks Like</h3>
-                    <p>
-                        I'm looking for these signals before launching publicly:
+                </section>
+
+                {/* Experiments */}
+                <section className="cs-section">
+                    <h2>Current Experiments</h2>
+                    <p className="editorial-text" style={{ fontSize: '1rem', marginBottom: '2rem' }}>
+                        I'm constantly testing hypotheses to improve engagement. Currently running A/B tests on:
                     </p>
-                    <ul>
-                        <li><strong>Story completion rate above 60%:</strong> This tells me the experience is engaging enough to hold attention</li>
-                        <li><strong>Creators publish within first session:</strong> If the creation flow is too complex, people won't use it. Need 50%+ of creators to publish their first story without dropping off.</li>
-                        <li><strong>Return rate above 25% within 3 days:</strong> Shows there's enough content variety and quality to bring people back</li>
-                    </ul>
-                    <p>
-                        Once I hit these benchmarks, I'll open up a broader beta and start testing monetization (premium stories, creator subscriptions, or ad-supported free tier).
-                    </p>
+                    <div className="bento-grid">
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <Target size={24} />
+                            </div>
+                            <h3>Creator Onboarding</h3>
+                            <p>
+                                Testing guided templates vs. free-form prompts. Hypothesis: constraints spark more creativity.
+                            </p>
+                        </div>
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <RefreshCw size={24} />
+                            </div>
+                            <h3>Discovery Feed</h3>
+                            <p>
+                                A/B testing algorithmic feed vs. curated collections to see which drives higher read-through rates.
+                            </p>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>

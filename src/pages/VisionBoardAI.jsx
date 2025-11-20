@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ArrowLeft, Sparkles, Lock, Zap } from 'lucide-react';
+import { ArrowLeft, Sparkles, Lock, Zap, Eye, Wand2, Smartphone, Cloud, Database, Code, Shirt, Home as HomeIcon, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './CaseStudy.css';
 
@@ -9,13 +10,13 @@ const VisionBoardAI = () => {
             {/* Hero */}
             <header className="cs-hero">
                 <div className="container">
-                    <Link to="/" className="back-link"><ArrowLeft size={20} /> Back to Home</Link>
+                    <Link to="/" className="back-link"><ArrowLeft size={18} /> Back to Home</Link>
                     <h1 className="cs-title">VisionBoardAI</h1>
-                    <p className="cs-subtitle">Helping people visualize their future with personalized AI imagery</p>
+                    <p className="cs-subtitle">Helping people visualize their future with personalized AI imagery. See yourself in your dream life.</p>
                     <div className="cs-tags">
                         <span>0-to-1 Product</span>
                         <span>iOS Development</span>
-                        <span>Currently in TestFlight</span>
+                        <span>TestFlight Beta</span>
                     </div>
                     <div className="cs-hero-cover">
                         <img src="/img/visionboard-cover.png" alt="VisionBoardAI preview" />
@@ -26,172 +27,230 @@ const VisionBoardAI = () => {
 
             {/* Content */}
             <div className="container cs-content">
-                <section className="cs-section">
-                    <h2>Overview</h2>
-                    <p>
-                        VisionBoardAI helps people create personalized vision boards by placing themselves—not random stock photos—into their dream life.
-                        Upload a few selfies, and the app creates an idealized "Future Self" avatar. Then use that avatar to try on designer outfits,
-                        place yourself in luxury travel destinations, or design your dream home.
-                    </p>
-                    <p>
-                        I'm currently in TestFlight, testing the core features (Future Self creation, Add Me tool, Wardrobe try-ons, Magic Edit for homes)
-                        and validating whether this resonates with the manifestation community. This is a pure 0-to-1 product challenge—no usage data yet,
-                        just qualitative feedback and hypothesis testing.
-                    </p>
-                </section>
 
+                {/* The Spark / Narrative */}
                 <section className="cs-section">
-                    <h2>Problem Discovery</h2>
-                    <p>
-                        The idea started when I noticed my girlfriend and her friends creating physical vision boards—cutting out magazine photos
-                        and Pinterest prints of dream homes, travel destinations, and fashion inspiration. But the images never actually looked like them.
-                        It was always someone else's life they were visualizing.
+                    <h2>The Spark</h2>
+                    <p className="editorial-text">
+                        It started with a simple observation: my girlfriend and her friends were spending hours on Pinterest,
+                        curating "vision boards" of their dream lives. But there was a disconnect. They were pinning photos of
+                        <em>other people's</em> lives—random models in Paris, strangers in luxury homes.
                     </p>
-                    <p>
-                        I started asking women (20s-40s) who believe in manifestation about their vision board process. Same story: they'd spend hours
-                        finding images on Pinterest, but none felt truly personal. "I want to see <em>me</em> in that Paris apartment," one person told me.
-                        "I want to see myself wearing that outfit, not some model."
-                    </p>
-                    <h3 style={{ marginTop: '2rem' }}>Core Hypotheses</h3>
-                    <p>
-                        These conversations shaped three key hypotheses:
-                    </p>
-                    <ul>
-                        <li><strong>Personal imagery drives belief:</strong> Seeing yourself—your actual face and body—in your dream scenario makes manifestation feel real, not aspirational.</li>
-                        <li><strong>Creation should be playful, not technical:</strong> People want to experiment with outfits, homes, and destinations without learning prompt engineering or design tools.</li>
-                        <li><strong>Privacy matters deeply:</strong> Vision boards are intimate. Users need to feel safe uploading selfies and personal dreams without worrying about data privacy.</li>
-                    </ul>
-                </section>
-
-                <section className="cs-section">
-                    <h2>Target Users</h2>
-                    <p>
-                        I'm building for women who already believe in manifestation and create vision boards—they just want a better way to do it.
-                    </p>
-                    <div className="cs-card">
-                        <h3>The Manifestation Enthusiast</h3>
-                        <p><strong>Who:</strong> Women, 22-40 years old, who actively practice manifestation or create vision boards (digital or physical)</p>
-                        <p><strong>Behavior:</strong> Spends hours on Pinterest saving images of dream homes, fashion inspiration, travel destinations. Journals about goals, follows manifestation creators on social media.</p>
-                        <p><strong>Current pain:</strong> The images on Pinterest never look like her. She's visualizing someone else's life, not her own. It doesn't feel personal or believable.</p>
-                        <p><strong>Dream outcome:</strong> See herself—her actual face and body—living in that dream apartment, wearing that designer outfit, or standing in that tropical destination.</p>
-                        <p><strong>Key categories:</strong> Dream home design, fashion/wardrobe goals, travel aesthetics, fitness/wellness transformations, career visualization</p>
+                    <div className="editorial-quote">
+                        "I want to see ME in that apartment. I want to see what I would look like in that dress."
                     </div>
-                    <h3 style={{ marginTop: '2rem' }}>What I'm Learning in TestFlight</h3>
-                    <ul>
-                        <li><strong>Home design is massive:</strong> Women spend the most time using Magic Edit to perfect dream home interiors—changing furniture, colors, layouts.</li>
-                        <li><strong>Wardrobe try-ons drive engagement:</strong> The ability to see yourself in different outfits (without actually shopping) is highly addictive.</li>
-                        <li><strong>"Add Me" creates belief:</strong> Placing yourself in a scene (not just seeing generic travel photos) makes the goal feel achievable, not aspirational.</li>
-                        <li><strong>Weekly refresh is desired:</strong> Users want to regenerate boards regularly as their style or goals evolve—this isn't a one-and-done activity.</li>
-                    </ul>
+                    <p className="editorial-text">
+                        That was the lightbulb moment. Manifestation isn't about looking at pretty pictures; it's about
+                        <em>believing</em> you can be there. I built VisionBoardAI to bridge that gap using generative AI,
+                        allowing users to place their own faces into their dream scenarios instantly.
+                    </p>
                 </section>
 
+                {/* Target Audience / Personas */}
                 <section className="cs-section">
-                    <h2>Product Approach & Development</h2>
-                    <p>
-                        I'm doing everything on this product—user research, product strategy, design, iOS development, and backend infrastructure.
-                        This gives me complete control over priorities and lets me iterate incredibly fast based on feedback.
-                    </p>
-                    <h3 style={{ marginTop: '2rem' }}>How I'm Building</h3>
-                    <div className="feature-grid">
-                        <div className="feature-item">
-                            <Sparkles className="feature-icon" />
-                            <h4>Weekly TestFlight Releases</h4>
-                            <p>
-                                I ship a new build every week with 1-2 hypothesis tests. After each release, I run feedback sessions with 5-8 testers
-                                to understand what's working and what needs to change.
-                            </p>
+                    <h2>Target Audience</h2>
+                    <div className="grid-2">
+                        <div className="persona-card">
+                            <div className="persona-header">
+                                <div className="persona-icon">
+                                    <Heart size={24} />
+                                </div>
+                                <div className="persona-name">The Manifestation Enthusiast</div>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Who:</strong>
+                                <span>Women (22-40) who actively practice manifestation, journaling, or yoga.</span>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Behavior:</strong>
+                                <span>Visual learner. Uses Pinterest daily. deeply values privacy and personal growth.</span>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Pain:</strong>
+                                <span>"Pinterest boards feel impersonal. I can't visualize <em>myself</em> achieving these goals."</span>
+                            </div>
                         </div>
-                        <div className="feature-item">
-                            <Zap className="feature-icon" />
-                            <h4>SwiftUI + AI Tools</h4>
-                            <p>
-                                I write all the iOS code in SwiftUI, using Cursor and Claude to help with boilerplate and move faster.
-                                This lets me stay focused on product decisions rather than syntax.
-                            </p>
-                        </div>
-                        <div className="feature-item">
-                            <Lock className="feature-icon" />
-                            <h4>User Feedback Loops</h4>
-                            <p>
-                                After each TestFlight release, I run 1-on-1 sessions with 5-8 users to watch them use the features.
-                                This qualitative feedback drives every prioritization decision.
-                            </p>
+
+                        <div className="persona-card">
+                            <div className="persona-header">
+                                <div className="persona-icon">
+                                    <Shirt size={24} />
+                                </div>
+                                <div className="persona-name">The Style Explorer</div>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Who:</strong>
+                                <span>Fashion-conscious users wanting to experiment with new looks.</span>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Behavior:</strong>
+                                <span>Wants to try trends without buying fast fashion.</span>
+                            </div>
+                            <div className="persona-detail">
+                                <strong>Pain:</strong>
+                                <span>"I don't know if this style suits me until I buy it."</span>
+                            </div>
                         </div>
                     </div>
                 </section>
 
+                {/* Overview Bento */}
                 <section className="cs-section">
-                    <h2>Product Features & Technical Approach</h2>
-                    <p>
-                        The app is built around four core features, each solving a specific part of the vision board creation process:
-                    </p>
-                    <div className="feature-grid">
-                        <div className="feature-item">
-                            <Sparkles className="feature-icon" />
-                            <h4>Future Self Creation</h4>
+                    <h2>The Solution</h2>
+                    <div className="bento-grid">
+                        <div className="bento-item large">
+                            <div className="bento-icon">
+                                <Eye size={24} />
+                            </div>
+                            <h3>Manifestation 2.0</h3>
                             <p>
-                                Upload 1-3 selfies, choose body type and outfit style, and the app generates an idealized version of you. This "Future Self"
-                                becomes the avatar used across all other features.
+                                VisionBoardAI replaces generic Pinterest photos with hyper-realistic AI imagery of YOU.
+                                See your actual face in your dream home, wearing designer clothes, or on vacation.
                             </p>
                         </div>
-                        <div className="feature-item">
-                            <Zap className="feature-icon" />
-                            <h4>Add Me Tool</h4>
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <Lock size={24} />
+                            </div>
+                            <h3>Privacy First</h3>
                             <p>
-                                Take any image (travel destination, luxury home, event venue) and seamlessly place your Future Self into it.
-                                This makes manifestation feel real—it's you in Paris, not a random model.
-                            </p>
-                        </div>
-                        <div className="feature-item">
-                            <Lock className="feature-icon" />
-                            <h4>Wardrobe Try-Ons</h4>
-                            <p>
-                                Experiment with different outfits on your Future Self without actually shopping. Users can visualize their style goals
-                                and see themselves in designer looks before committing.
-                            </p>
-                        </div>
-                        <div className="feature-item">
-                            <Sparkles className="feature-icon" />
-                            <h4>Magic Edit for Homes</h4>
-                            <p>
-                                Use natural language to edit interior spaces: "Make the couch cream colored" or "Add gold accents to the room."
-                                Users can perfect their dream home down to the smallest detail.
+                                Vision boards are intimate. All photos are processed securely, and we never train on user data.
                             </p>
                         </div>
                     </div>
-                    <h3 style={{ marginTop: '2rem' }}>Technical Stack</h3>
-                    <ul>
-                        <li><strong>SwiftUI + Firebase:</strong> Native iOS app with Firestore for board storage and Firebase Auth for secure user sessions.</li>
-                        <li><strong>Cloudflare Workers:</strong> Proxies all AI requests (Fal, Replicate) to keep API keys server-side and add rate limiting.</li>
-                        <li><strong>Image generation models:</strong> Using Fal's nano-banana-edit and Seedream v4 for face blending and scene composition. Models are configurable server-side so I can A/B test without app updates.</li>
-                        <li><strong>Natural language editing:</strong> Integrating GPT-4 Vision to translate user text prompts into image editing parameters for Magic Edit.</li>
-                    </ul>
                 </section>
 
+                {/* Problem / Solution Comparison */}
                 <section className="cs-section">
-                    <h2>Current Experiments & Next Steps</h2>
-                    <p>
-                        I'm focused on validating whether the core features resonate and understanding which ones drive the most engagement.
-                        No growth experiments yet—just learning.
+                    <h2>The Problem</h2>
+                    <div className="comparison-grid">
+                        <div className="comparison-col">
+                            <h3 className="pain">The Old Way</h3>
+                            <ul className="comparison-list">
+                                <li>Cutting out magazine clippings</li>
+                                <li>Pinterest boards of strangers</li>
+                                <li>"That's not me, it's just a model"</li>
+                                <li>Hard to visualize the feeling</li>
+                            </ul>
+                        </div>
+                        <div className="comparison-col">
+                            <h3 className="solution">VisionBoardAI</h3>
+                            <ul className="comparison-list">
+                                <li>You are the main character</li>
+                                <li>Try on outfits instantly</li>
+                                <li>Place yourself in any location</li>
+                                <li>Edit your dream home with words</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Core Features Bento */}
+                <section className="cs-section">
+                    <h2>Core Features</h2>
+                    <div className="bento-grid">
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <Sparkles size={24} />
+                            </div>
+                            <h3>Future Self Avatar</h3>
+                            <p>
+                                Upload 3 selfies to train a personalized model. The app generates an idealized "Future Self" to use in every scene.
+                            </p>
+                        </div>
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <Wand2 size={24} />
+                            </div>
+                            <h3>"Add Me" Tool</h3>
+                            <p>
+                                Take any photo—a luxury hotel, a red carpet event—and seamlessly insert your Future Self into it.
+                            </p>
+                        </div>
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <Shirt size={24} />
+                            </div>
+                            <h3>Virtual Wardrobe</h3>
+                            <p>
+                                Try on high-fashion outfits without shopping. Visualize your style evolution instantly.
+                            </p>
+                        </div>
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <HomeIcon size={24} />
+                            </div>
+                            <h3>Magic Home Edit</h3>
+                            <p>
+                                "Make the couch velvet green." Use natural language to design your dream interior space.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Tech Stack */}
+                <section className="cs-section">
+                    <h2>Tech Stack</h2>
+                    <p>Heavy AI integration with a native iOS feel.</p>
+                    <div className="tech-stack-grid">
+                        <div className="tech-item">
+                            <Code className="tech-icon" size={24} />
+                            <div className="tech-name">SwiftUI</div>
+                        </div>
+                        <div className="tech-item">
+                            <Cloud className="tech-icon" size={24} />
+                            <div className="tech-name">Fal.ai</div>
+                        </div>
+                        <div className="tech-item">
+                            <Zap className="tech-icon" size={24} />
+                            <div className="tech-name">Replicate</div>
+                        </div>
+                        <div className="tech-item">
+                            <Database className="tech-icon" size={24} />
+                            <div className="tech-name">Firebase</div>
+                        </div>
+                        <div className="tech-item">
+                            <Smartphone className="tech-icon" size={24} />
+                            <div className="tech-name">CoreML</div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Experiments */}
+                <section className="cs-section">
+                    <h2>Active Experiments</h2>
+                    <p className="editorial-text" style={{ fontSize: '1rem', marginBottom: '2rem' }}>
+                        Validating core loops before scaling. Current focus areas:
                     </p>
-                    <h3 style={{ marginTop: '2rem' }}>Active Experiments</h3>
-                    <ul>
-                        <li><strong>Onboarding flow:</strong> Testing whether users should start with Future Self creation or jump straight into a board category (Home, Travel, Fashion). Hypothesis: starting with Future Self builds more investment.</li>
-                        <li><strong>Home editing depth:</strong> How much control do users want with Magic Edit? Testing simple presets vs. full natural language editing. Early signal: people want granular control.</li>
-                        <li><strong>Wardrobe library:</strong> Should outfit try-ons come from a curated library or user-uploaded inspiration images? Testing both approaches.</li>
-                        <li><strong>Board organization:</strong> Validating whether pre-defined categories (Home, Travel, Career, Fashion, Wellness) work or if users want custom board creation.</li>
-                        <li><strong>Weekly regeneration:</strong> Testing notifications that encourage users to update boards as their goals evolve. Hypothesis: this creates a recurring habit.</li>
-                    </ul>
-                    <h3 style={{ marginTop: '2rem' }}>Success Metrics Before Launch</h3>
-                    <ul>
-                        <li><strong>Creation completion:</strong> 75%+ of users successfully create a Future Self and add it to at least one board</li>
-                        <li><strong>Feature adoption:</strong> Users try at least 2 of the 4 core features (Add Me, Wardrobe, Magic Edit) within their first session</li>
-                        <li><strong>7-day return rate:</strong> 30%+ come back within a week to update or create new boards</li>
-                        <li><strong>Qualitative signal:</strong> Users describe feeling like the board is "actually mine" or "this is really me"</li>
-                    </ul>
-                    <p>
-                        Once these benchmarks hit, I'll expand TestFlight and start testing monetization (subscription tiers, board limits, premium styles).
-                    </p>
+                    <div className="bento-grid-3">
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <Zap size={24} />
+                            </div>
+                            <h3>Onboarding Flow</h3>
+                            <p>
+                                Testing if users convert better when starting with "Future Self" creation vs. browsing templates.
+                            </p>
+                        </div>
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <HomeIcon size={24} />
+                            </div>
+                            <h3>Edit Depth</h3>
+                            <p>
+                                Do users want simple presets or full natural language control for home editing? Testing both.
+                            </p>
+                        </div>
+                        <div className="bento-item">
+                            <div className="bento-icon">
+                                <Sparkles size={24} />
+                            </div>
+                            <h3>Weekly Refresh</h3>
+                            <p>
+                                Notifications to "refresh your vision" every Sunday. Testing retention impact.
+                            </p>
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>
