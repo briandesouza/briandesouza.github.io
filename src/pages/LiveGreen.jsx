@@ -26,9 +26,13 @@ const LiveGreen = () => {
                 <section className="cs-section">
                     <h2>Overview</h2>
                     <p>
-                        LiveGreen let anyone automatically understand, reduce, and offset their carbon footprint.
-                        It’s the pre-AI chapter of my work—the one product here that shipped to the App Store with real telemetry, revenue, and Apple recognition.
-                        I served as co-founder & product lead (my co-founder owned visual design), running research, prioritization, iOS engineering, partnerships, and monetization experiments to grow the business to meaningful revenue.
+                        LiveGreen was a carbon footprint tracking app that helped people understand and reduce their environmental impact.
+                        Unlike my current projects, this one shipped to the App Store and had real users and data to work with.
+                    </p>
+                    <p>
+                        I co-founded the company with a designer (who owned the visual system) and served as product lead—handling user research,
+                        iOS development, product strategy, and partnerships. This was my first 0-to-1 product, and it taught me most of what I know
+                        about building consumer apps.
                     </p>
                     <div className="stats-grid">
                         <div className="stat-item">
@@ -36,11 +40,11 @@ const LiveGreen = () => {
                             <span className="stat-label">Active Users</span>
                         </div>
                         <div className="stat-item">
-                            <span className="stat-value">$48K</span>
-                            <span className="stat-label">ARR at Peak</span>
+                            <span className="stat-value">35%</span>
+                            <span className="stat-label">D30 Retention</span>
                         </div>
                         <div className="stat-item">
-                            <span className="stat-value">80k</span>
+                            <span className="stat-value">80k+</span>
                             <span className="stat-label">Trees Funded</span>
                         </div>
                     </div>
@@ -50,15 +54,17 @@ const LiveGreen = () => {
                     <div className="cs-card">
                         <h3>The Problem</h3>
                         <p>
-                            Climate change is an abstract villain. Most people feel helpless, and carbon accounting tools were either academic calculators or corporate ESG products.
-                            Our challenge: make sustainability feel personal, low-friction, and habit-forming for mainstream consumers.
+                            Climate change feels overwhelming and abstract. Most people want to help but don't know where to start or how to measure their impact.
+                            Existing carbon tracking tools were either academic calculators that required manual data entry or enterprise ESG software.
+                            Nothing felt personal, automatic, or habit-forming for everyday consumers.
                         </p>
                     </div>
                     <div className="cs-card">
                         <h3>My Role</h3>
                         <p>
-                            Co-founded the company, ran research with 500+ people, built the Swift app, co-created the carbon scoring model,
-                            hired contractors, pitched investors, launched Forest Card (our debit-card pilot), and owned ASO + lifecycle marketing while my co-founder led the design system.
+                            I co-founded LiveGreen and led product: ran 500+ user interviews, built the iOS app in Swift,
+                            designed the carbon scoring algorithm, managed partnerships, and led App Store optimization. My co-founder
+                            owned the visual design system and brand.
                         </p>
                     </div>
                 </section>
@@ -66,28 +72,31 @@ const LiveGreen = () => {
                 <section className="cs-section">
                     <h2>Product Strategy</h2>
                     <p>
-                        We centered on three product tenets that guided every roadmap debate:
+                        Through research with 500+ potential users, we landed on three core principles that guided every product decision:
                     </p>
                     <div className="feature-grid">
                         <div className="feature-item">
                             <TrendingUp className="feature-icon" />
                             <h4>Automate the boring math</h4>
                             <p>
-                                Linked Plaid + utility APIs so the app generated a carbon score from bank transactions, commute data, and energy bills—no manual entry, no spreadsheet.
+                                We integrated with Plaid and utility APIs to automatically calculate your carbon footprint from credit card transactions,
+                                commute patterns, and energy bills. No spreadsheets, no manual logging—just connect your accounts and see your impact.
                             </p>
                         </div>
                         <div className="feature-item">
                             <Award className="feature-icon" />
                             <h4>Reward progress, not perfection</h4>
                             <p>
-                                Designed a Daily Eco Score and streak mechanics that celebrated small wins (Meatless Monday, Transit Tuesdays) to reduce shame and keep people coming back.
+                                We built a Daily Eco Score and streak system that celebrated small wins like "Meatless Monday" or taking transit instead of driving.
+                                The goal was to make people feel good about incremental progress rather than guilty about not being perfect.
                             </p>
                         </div>
                         <div className="feature-item">
                             <Users className="feature-icon" />
-                            <h4>Community = accountability</h4>
+                            <h4>Community drives accountability</h4>
                             <p>
-                                Launched a Challenges feed + referral loops so friends could nudge each other, and partnered with clubs/corporates who needed a turnkey sustainability challenge.
+                                We added a social feed where friends could complete challenges together and see each other's progress. We also partnered
+                                with universities and companies who wanted to run sustainability challenges for their communities.
                             </p>
                         </div>
                     </div>
@@ -96,8 +105,9 @@ const LiveGreen = () => {
                 <section className="cs-section">
                     <h2>Discovery & Research</h2>
                     <p>
-                        Before writing a single line of code, we validated our hypothesis. We posted a prototype in environmental Facebook groups
-                        and received overwhelming interest from over 500 people. This helped us identify our core personas:
+                        Before building anything, we needed to validate that people actually wanted this. We posted a simple prototype in
+                        environmental Facebook groups and got responses from over 500 people. Through interviews and surveys, we identified
+                        two core personas:
                     </p>
                     <div className="personas-grid">
                         <div className="persona-card">
@@ -114,57 +124,64 @@ const LiveGreen = () => {
                 </section>
 
                 <section className="cs-section">
-                    <h2>The Solution: Making Sustainability Addictive</h2>
+                    <h2>The Solution: Making Sustainability a Habit</h2>
                     <p>
-                        We leveraged behavioral psychology (BJ Fogg’s Behavior Model) to turn eco-friendly actions into a habit.
-                        The core loop was simple: <strong>Track → Score → Reward → Share</strong>.
+                        We used behavioral psychology principles (specifically BJ Fogg's Behavior Model) to design a system that turned
+                        eco-friendly actions into habits. The core loop was: <strong>Track → Score → Reward → Share</strong>.
                     </p>
                     <div className="feature-grid">
                         <div className="feature-item">
                             <BarChart className="feature-icon" />
-                            <h4>Frictionless Tracking</h4>
+                            <h4>Automatic Tracking</h4>
                             <p>
-                                <strong>Insight:</strong> Manual logging leads to churn.
-                                <br/>
-                                <strong>Solution:</strong> We integrated Plaid API to automatically calculate carbon footprint from credit card transactions (e.g., Gas Station = High Carbon, Whole Foods = Medium).
+                                <strong>The insight:</strong> Manual logging kills retention. People won't stick with an app that requires constant data entry.
+                                <br/><br/>
+                                <strong>Our solution:</strong> We used Plaid to connect users' credit cards and automatically categorized transactions
+                                (gas stations = high carbon, grocery stores = medium, transit = low). Your carbon score updated automatically based on your spending.
                             </p>
                         </div>
                         <div className="feature-item">
                             <Award className="feature-icon" />
-                            <h4>Gamification Layer</h4>
+                            <h4>Gamification</h4>
                             <p>
-                                We introduced a "Daily Eco Score" (0-100). Users could "level up" by completing challenges (e.g., "Meatless Monday").
-                                This variable reward system kept D30 retention at 35% (vs industry avg of 15%).
+                                We created a "Daily Eco Score" (0-100) and let users level up by completing challenges like "Meatless Monday" or "Bike to Work Week."
+                                This variable reward system drove 35% 30-day retention—more than double the industry average of 15% for lifestyle apps.
                             </p>
                         </div>
                         <div className="feature-item">
                             <Users className="feature-icon" />
-                            <h4>Social Proof</h4>
+                            <h4>Social Accountability</h4>
                             <p>
-                                The "Community Feed" wasn't just for likes; it was for accountability. Seeing friends complete challenges validated the user's own efforts, creating a viral growth loop.
+                                The Community Feed showed friends' challenges and progress. This wasn't just for engagement—seeing others take action
+                                validated users' own efforts and created a viral growth loop through word-of-mouth.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 <section className="cs-section">
-                    <h2>Technical Execution</h2>
+                    <h2>Technical Implementation</h2>
                     <p>
-                        I owned the iOS build, backend integrations, and data modeling. Highlights:
+                        I built the iOS app in Swift and handled all backend integrations. Key components:
                     </p>
                     <ul>
-                        <li><strong>Carbon model:</strong> Built a scoring engine that maps merchant category codes + utility usage into CO₂e estimates calibrated with EPA data.</li>
-                        <li><strong>Bank connectivity:</strong> Plaid + Yodlee integrations drive passive tracking; background jobs categorize transactions and push nudges.</li>
-                        <li><strong>Gamification system:</strong> Dynamic challenge builder lets us ship new seasonal quests without an app update.</li>
-                        <li><strong>Forest Card pilot:</strong> Partnered with Galileo Financial to launch a debit card that funded tree planting via interchange, generating $48K ARR.</li>
+                        <li><strong>Carbon scoring algorithm:</strong> Created a model that converts merchant category codes and utility data into CO₂e estimates,
+                        calibrated against EPA datasets.</li>
+                        <li><strong>Automatic bank sync:</strong> Integrated Plaid and Yodlee to pull transaction data, then used background jobs to categorize
+                        purchases and update carbon scores daily.</li>
+                        <li><strong>Dynamic challenge system:</strong> Built a flexible challenge engine that let us create and ship new seasonal challenges
+                        without requiring an app update.</li>
+                        <li><strong>Tree planting partnerships:</strong> Integrated with environmental organizations to fund tree planting based on user actions,
+                        with real-time tracking of collective impact.</li>
                     </ul>
                 </section>
 
                 <section className="cs-section">
                     <h2>Growth & Impact</h2>
                     <p>
-                        LiveGreen grew primarily through organic search and word-of-mouth. We doubled down on App Store Optimization for keywords like "carbon tracker"
-                        and layered in ambassador programs with universities and sustainability clubs. Highlights:
+                        We grew LiveGreen primarily through organic channels—App Store optimization and word-of-mouth. I focused heavily on ASO,
+                        targeting keywords like "carbon tracker" and "carbon footprint," which got us to #1 in the Lifestyle category in 3 countries.
+                        We also built ambassador programs with university sustainability clubs and corporate partners.
                     </p>
                     <div className="impact-gallery">
                         <img src="/img/appStoreOneBig.png" alt="App Store Screenshot 1" className="impact-img" />
@@ -172,7 +189,8 @@ const LiveGreen = () => {
                         <img src="/img/Reduce-lg.png" alt="App Store Screenshot 3" className="impact-img" />
                     </div>
                     <p className="caption">
-                        Reached #1 in Lifestyle in 3 countries, won HackDuke + Big Idea pitch competitions, and offset an estimated 2,000+ tons of CO₂ via partner tree planting.
+                        We reached #1 in the Lifestyle category in 3 countries, won multiple pitch competitions (HackDuke, UF Big Idea),
+                        and helped users collectively offset an estimated 2,000+ tons of CO₂ through our tree-planting partnerships.
                     </p>
                 </section>
 
@@ -192,13 +210,13 @@ const LiveGreen = () => {
                             <span className="stat-label">Lifestyle Category (3 countries)</span>
                         </div>
                         <div className="stat-item">
-                            <span className="stat-value">$48K</span>
-                            <span className="stat-label">ARR from Forest Card</span>
+                            <span className="stat-value">80K+</span>
+                            <span className="stat-label">Trees Funded</span>
                         </div>
                     </div>
                     <p style={{ marginTop: '1rem' }}>
-                        Most importantly, users kept telling us the app made climate action feel achievable.
-                        That insight still guides how I design consumer experiences today.
+                        The most meaningful feedback was hearing that the app made climate action feel achievable. That lesson—making complex
+                        problems feel manageable—still guides how I approach product design.
                     </p>
                 </section>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ExternalLink, ChevronRight } from 'lucide-react';
+import { ArrowRight, ExternalLink, ChevronRight, Users, Zap, Code, Headphones, Book, Coffee, Gamepad2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -14,13 +14,13 @@ const Home = () => {
                             Hi, I'm <span className="highlight">Brian</span>.
                         </h1>
                         <p className="hero-subtitle">
-                            Product leader + engineer shaping AI-native consumer experiences.
+                            Product manager and builder creating AI-native consumer experiences.
                         </p>
                         <p className="hero-bio">
-                            I led Copilot growth and communications at <strong>Microsoft</strong>, and previously grew
-                            <strong> LiveGreen</strong> from a hackathon project to 50K+ people actively reducing their carbon footprints.
-                            Today I’m a solo builder creating AI-native mobile products like <strong>Plotwist</strong> and <strong>VisionBoardAI</strong>,
-                            pairing Swift with agentic tools such as Cursor, Claude Code, and Codex so I can move fast without a big team.
+                            I led Copilot growth at <strong>Microsoft</strong>, shipping to millions of users across enterprise and consumer.
+                            Before that, I built <strong>LiveGreen</strong>—a carbon tracking app that grew to 50K+ users.
+                            Now I'm building <strong>Plotwist</strong> and <strong>VisionBoardAI</strong>, two 0-to-1 iOS products where
+                            I'm doing everything from user research to SwiftUI development.
                         </p>
                         <div className="hero-actions">
                             <a href="#projects" className="btn btn-primary">View Work</a>
@@ -50,7 +50,7 @@ const Home = () => {
                             </div>
                             <div className="project-content">
                                 <h3>Plotwist</h3>
-                                <p>The TikTok of Interactive Fiction. AI-powered choose-your-own-adventure stories.</p>
+                                <p>Building interactive fiction for the TikTok generation. Currently in TestFlight.</p>
                                 <div className="tags">
                                     <span>Founder</span>
                                     <span>Product</span>
@@ -70,10 +70,10 @@ const Home = () => {
                             </div>
                             <div className="project-content">
                                 <h3>VisionBoardAI</h3>
-                                <p>Manifest your future with AI. Premium vision board creation tool.</p>
+                                <p>Vision board app where you create an AI version of yourself, then place it in dream homes, outfits, and destinations. In TestFlight.</p>
                                 <div className="tags">
                                     <span>Founder</span>
-                                    <span>Design</span>
+                                    <span>Product</span>
                                     <span>iOS</span>
                                 </div>
                             </div>
@@ -90,11 +90,11 @@ const Home = () => {
                             </div>
                             <div className="project-content">
                                 <h3>LiveGreen</h3>
-                                <p>Carbon footprint tracking app. Helping 40k+ users live a greener lifestyle.</p>
+                                <p>Carbon tracking app that grew to 50K+ users. My first 0-to-1 product experience.</p>
                                 <div className="tags">
                                     <span>Co-Founder</span>
-                                    <span>Product</span>
-                                    <span>Design</span>
+                                    <span>Product Lead</span>
+                                    <span>iOS</span>
                                 </div>
                             </div>
                         </Link>
@@ -110,13 +110,13 @@ const Home = () => {
                         <div className="timeline-item">
                             <div className="timeline-date">2025 - Present</div>
                             <div className="timeline-content">
-                                <h3>Founder & Product Engineer</h3>
+                                <h3>Founder & Product Manager</h3>
                                 <p className="company">Plotwist • VisionBoardAI</p>
-                                <p>Shipping iOS apps end-to-end: user research, SwiftUI builds, AI infra, monetization, and TestFlight ops.</p>
+                                <p>Building two 0-to-1 iOS products from concept to TestFlight. Handling everything: user research, product strategy, SwiftUI development, and go-to-market planning.</p>
                                 <ul>
-                                    <li>Built Plotwist’s deterministic AI story engine with near-zero perceived latency.</li>
-                                    <li>Designed VisionBoardAI’s premium design system + local-first privacy model to boost paid conversion.</li>
-                                    <li>Advise 3 seed-stage teams on GTM experiments, ASO, and onboarding instrumentation.</li>
+                                    <li>Conducted 10+ user interviews to validate problem spaces and define target personas for both products.</li>
+                                    <li>Built and iterated on TestFlight builds, using qualitative feedback to prioritize features and refine UX.</li>
+                                    <li>Architected AI-powered backends using Cloudflare Workers, Firebase, and various LLM APIs to deliver seamless experiences.</li>
                                 </ul>
                             </div>
                         </div>
@@ -125,24 +125,24 @@ const Home = () => {
                             <div className="timeline-content">
                                 <h3>Product Manager 2, Copilot Growth & Communications</h3>
                                 <p className="company">Microsoft</p>
-                                <p>Drove lifecycle programs that activated admins and end users across Microsoft 365.</p>
+                                <p>Led programs that helped admins and end users discover and adopt Copilot across Microsoft 365.</p>
                                 <ul>
-                                    <li>Launched Copilot’s first direct-to-user welcome motion → +12pp week-one usage, 55% open rate on 800K monthly sends.</li>
-                                    <li>Built unified Copilot release notes hub for 18 workloads, now serving 13K+ IT managers monthly.</li>
-                                    <li>Automated feature comms with an internal AI pipeline, cutting content production time by 80%.</li>
+                                    <li>Launched Copilot's first direct-to-user welcome experience, driving a 12-point increase in week-one usage with 55% open rates on 800K monthly emails.</li>
+                                    <li>Created a unified release notes hub serving 18 workloads and 13K+ IT managers monthly—now the go-to resource for tracking Copilot updates.</li>
+                                    <li>Built an AI-powered content pipeline that reduced feature announcement production time by 80%.</li>
                                 </ul>
                             </div>
                         </div>
                         <div className="timeline-item">
                             <div className="timeline-date">2019 - 2021</div>
                             <div className="timeline-content">
-                                <h3>Co-Founder & Product Designer</h3>
+                                <h3>Co-Founder & Product Lead</h3>
                                 <p className="company">LiveGreen</p>
-                                <p>Scaled a carbon-footprint companion app recognized by Apple and sustainability orgs.</p>
+                                <p>Built a carbon footprint tracking app from the ground up, taking it from hackathon project to App Store success.</p>
                                 <ul>
-                                    <li>Grew to 50K active users, $48K ARR (Forest Card), and 80K+ trees funded by community actions.</li>
-                                    <li>Conducted 500+ interviews to define personas, core loops, and ASO strategy; #1 Lifestyle in 3 countries.</li>
-                                    <li>Led iOS design/engineering plus partnerships with Galileo Financial and university programs.</li>
+                                    <li>Grew to 50K active users with 35% 30-day retention—more than double the industry average for lifestyle apps.</li>
+                                    <li>Ran 500+ user interviews to understand our audience, then hit #1 in the Lifestyle category across 3 countries.</li>
+                                    <li>Owned iOS development, designed the core experience, and managed partnerships with financial services and campus sustainability programs.</li>
                                 </ul>
                             </div>
                         </div>
@@ -168,22 +168,84 @@ const Home = () => {
             <section id="about" className="section about">
                 <div className="container">
                     <h2 className="section-title">About Me</h2>
-                    <div className="about-content">
-                        <p>
-                            I grew up writing Swift between computer science lectures at the University of Florida,
-                            launched LiveGreen before graduation, then spent four years inside Microsoft modernizing the admin experience
-                            and launching Copilot’s go-to-market stack. That mix of scrappy founder energy and enterprise rigor
-                            now informs how I scope, prioritize, and measure everything I touch.
-                        </p>
-                        <p>
-                            I obsess over onboarding friction, instrumentation, and narrative clarity—because the best PM decks read like case studies,
-                            and the best shipped features tell a story. When I’m not iterating on an LLM prompt or refining a SwiftUI animation,
-                            I’m probably mentoring PMs breaking into AI or testing the latest Caltrain build on unsuspecting friends.
-                        </p>
-                        <p>
-                            <strong>Superpowers:</strong> translating user research into crisp product strategy, prototyping fast enough to inform real technical trade-offs,
-                            and partnering with design + engineering to hit ambitious launch dates without sacrificing craft.
-                        </p>
+                    <div className="about-grid">
+                        <div className="bio-column">
+                            <p className="bio-intro">
+                                I started coding in Swift during college, launched LiveGreen before graduating, then spent four years at Microsoft
+                                learning how to ship products at scale. Working on Copilot taught me how to think about growth, user activation, and
+                                building for millions. Now I'm applying that to my own 0-to-1 products.
+                            </p>
+                            <p>
+                                I run a lot of user interviews before building anything. Once I'm confident in the direction, I move fast. I also love
+                                the craft of building—writing SwiftUI, designing experiences, and picking the right AI models. Being able to do both PM
+                                work and development lets me iterate quickly without waiting on a team.
+                            </p>
+                        </div>
+                        <div className="skills-column">
+                            <div className="skill-card">
+                                <div className="skill-icon">
+                                    <Users size={24} />
+                                </div>
+                                <h4>User Research</h4>
+                                <p>Understanding the "why" before building the "what".</p>
+                            </div>
+                            <div className="skill-card">
+                                <div className="skill-icon">
+                                    <Zap size={24} />
+                                </div>
+                                <h4>Rapid Prototyping</h4>
+                                <p>Moving from idea to testable product in days.</p>
+                            </div>
+                            <div className="skill-card">
+                                <div className="skill-icon">
+                                    <Code size={24} />
+                                </div>
+                                <h4>Full Stack iOS</h4>
+                                <p>SwiftUI, Firebase, and Python backends.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="favorites-section">
+                        <h3 className="favorites-title">When I'm not working</h3>
+                        <div className="favorites-grid">
+                            <div className="favorite-card">
+                                <div className="favorite-icon">
+                                    <Headphones size={20} />
+                                </div>
+                                <div className="favorite-info">
+                                    <span className="favorite-label">Listening to</span>
+                                    <span className="favorite-value">Acquired Podcast</span>
+                                </div>
+                            </div>
+                            <div className="favorite-card">
+                                <div className="favorite-icon">
+                                    <Book size={20} />
+                                </div>
+                                <div className="favorite-info">
+                                    <span className="favorite-label">Reading</span>
+                                    <span className="favorite-value">The Design of Everyday Things</span>
+                                </div>
+                            </div>
+                            <div className="favorite-card">
+                                <div className="favorite-icon">
+                                    <Coffee size={20} />
+                                </div>
+                                <div className="favorite-info">
+                                    <span className="favorite-label">Fuel</span>
+                                    <span className="favorite-value">Cortado</span>
+                                </div>
+                            </div>
+                            <div className="favorite-card">
+                                <div className="favorite-icon">
+                                    <Gamepad2 size={20} />
+                                </div>
+                                <div className="favorite-info">
+                                    <span className="favorite-label">VideoGame</span>
+                                    <span className="favorite-value">Civ 5</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

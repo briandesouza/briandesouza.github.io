@@ -173,7 +173,8 @@
 }
 
 .project-image {
-    height: 220px;
+    aspect-ratio: 1.84 / 1;
+    /* Matches 1691x917 image dimensions */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -306,6 +307,130 @@
     font-size: 0.95rem;
 }
 
+/* About Section Redesign */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.bio-column p {
+    color: var(--color-text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.bio-intro {
+    font-size: 1.2rem !important;
+    color: var(--color-text-primary) !important;
+    font-weight: 500;
+}
+
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-card {
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--glass-border);
+    padding: 1.25rem;
+    border-radius: 16px;
+    transition: all 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateX(5px);
+    border-color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.skill-icon {
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+}
+
+.skill-card h4 {
+    color: var(--color-text-primary);
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.skill-card p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Favorites Section */
+.favorites-section {
+    border-top: 1px solid var(--glass-border);
+    padding-top: 3rem;
+}
+
+.favorites-title {
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.favorite-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.favorite-card:hover {
+    background: var(--color-bg-secondary);
+    border-color: var(--glass-border);
+}
+
+.favorite-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-bg-primary);
+    border-radius: 50%;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--glass-border);
+}
+
+.favorite-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.favorite-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.favorite-value {
+    font-size: 0.95rem;
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .hero-container {
@@ -333,5 +458,10 @@
 
     .hero-title {
         font-size: 2.5rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
