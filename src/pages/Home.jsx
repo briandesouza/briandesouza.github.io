@@ -14,12 +14,13 @@ const Home = () => {
                             Hi, I'm <span className="highlight">Brian</span>.
                         </h1>
                         <p className="hero-subtitle">
-                            I'm a Product Manager and Engineer building the future of interactive experiences.
+                            Product leader + engineer shaping AI-native consumer experiences.
                         </p>
                         <p className="hero-bio">
-                            Previously at <strong>Microsoft</strong>. Now building AI-native consumer apps like
-                            <strong> Plotwist</strong> and <strong>VisionBoardAI</strong>.
-                            I bridge the gap between user empathy, technical feasibility, and premium design.
+                            I led Copilot growth and communications at <strong>Microsoft</strong>, and previously grew
+                            <strong> LiveGreen</strong> from a hackathon project to 50K+ people actively reducing their carbon footprints.
+                            Today I’m a solo builder creating AI-native mobile products like <strong>Plotwist</strong> and <strong>VisionBoardAI</strong>,
+                            pairing Swift with agentic tools such as Cursor, Claude Code, and Codex so I can move fast without a big team.
                         </p>
                         <div className="hero-actions">
                             <a href="#projects" className="btn btn-primary">View Work</a>
@@ -41,6 +42,7 @@ const Home = () => {
                         {/* Plotwist Card */}
                         <Link to="/plotwist" className="project-card">
                             <div className="project-image plotwist-bg">
+                                <img src="/img/plotwist-cover.png" alt="Plotwist preview" className="project-img" />
                                 <div className="project-overlay">
                                     <span>View Case Study</span>
                                     <ArrowRight size={20} />
@@ -60,6 +62,7 @@ const Home = () => {
                         {/* VisionBoardAI Card */}
                         <Link to="/visionboardai" className="project-card">
                             <div className="project-image visionboard-bg">
+                                <img src="/img/visionboard-cover.png" alt="VisionBoardAI preview" className="project-img" />
                                 <div className="project-overlay">
                                     <span>View Case Study</span>
                                     <ArrowRight size={20} />
@@ -79,6 +82,7 @@ const Home = () => {
                         {/* LiveGreen Card */}
                         <Link to="/livegreen" className="project-card">
                             <div className="project-image livegreen-bg">
+                                <img src="/img/livegreenPreview.png" alt="LiveGreen preview" className="project-img" />
                                 <div className="project-overlay">
                                     <span>View Case Study</span>
                                     <ArrowRight size={20} />
@@ -107,16 +111,26 @@ const Home = () => {
                             <div className="timeline-date">2025 - Present</div>
                             <div className="timeline-content">
                                 <h3>Founder & Product Engineer</h3>
-                                <p className="company">Stealth / Advisory</p>
-                                <p>Building consumer AI apps (Plotwist, VisionBoardAI) and advising early-stage startups on product strategy and AI integration.</p>
+                                <p className="company">Plotwist • VisionBoardAI</p>
+                                <p>Shipping iOS apps end-to-end: user research, SwiftUI builds, AI infra, monetization, and TestFlight ops.</p>
+                                <ul>
+                                    <li>Built Plotwist’s deterministic AI story engine with near-zero perceived latency.</li>
+                                    <li>Designed VisionBoardAI’s premium design system + local-first privacy model to boost paid conversion.</li>
+                                    <li>Advise 3 seed-stage teams on GTM experiments, ASO, and onboarding instrumentation.</li>
+                                </ul>
                             </div>
                         </div>
                         <div className="timeline-item">
                             <div className="timeline-date">2021 - 2025</div>
                             <div className="timeline-content">
-                                <h3>Product Manager</h3>
+                                <h3>Product Manager 2, Copilot Growth & Communications</h3>
                                 <p className="company">Microsoft</p>
-                                <p>Led product initiatives for [Specific Team]. Drove [Impact/Metric]. (Placeholder for specific Microsoft details).</p>
+                                <p>Drove lifecycle programs that activated admins and end users across Microsoft 365.</p>
+                                <ul>
+                                    <li>Launched Copilot’s first direct-to-user welcome motion → +12pp week-one usage, 55% open rate on 800K monthly sends.</li>
+                                    <li>Built unified Copilot release notes hub for 18 workloads, now serving 13K+ IT managers monthly.</li>
+                                    <li>Automated feature comms with an internal AI pipeline, cutting content production time by 80%.</li>
+                                </ul>
                             </div>
                         </div>
                         <div className="timeline-item">
@@ -124,7 +138,26 @@ const Home = () => {
                             <div className="timeline-content">
                                 <h3>Co-Founder & Product Designer</h3>
                                 <p className="company">LiveGreen</p>
-                                <p>Co-founded a sustainability startup. Designed and built the iOS app, growing it to 40k+ users. Won awards at HackDuke.</p>
+                                <p>Scaled a carbon-footprint companion app recognized by Apple and sustainability orgs.</p>
+                                <ul>
+                                    <li>Grew to 50K active users, $48K ARR (Forest Card), and 80K+ trees funded by community actions.</li>
+                                    <li>Conducted 500+ interviews to define personas, core loops, and ASO strategy; #1 Lifestyle in 3 countries.</li>
+                                    <li>Led iOS design/engineering plus partnerships with Galileo Financial and university programs.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="timeline-item">
+                            <div className="timeline-date">2016 - 2021</div>
+                            <div className="timeline-content">
+                                <h3>University of Florida</h3>
+                                <p className="company">B.S. Computer Science</p>
+                                <ul>
+                                    <li>Big Idea Pitch Competition (UF, 2019) — first place, $25K prize.</li>
+                                    <li>Global Hackathon Finalist at Facebook HQ (2017).</li>
+                                    <li>Best Hack, MHacks @ University of Michigan (2017) — awarded by Facebook + Hasura.</li>
+                                    <li>Best iOS Hack, HackTech Caltech (2017) — awarded by Make School.</li>
+                                    <li>Best Hack, HackDuke (2016) — awarded by Facebook.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -137,13 +170,19 @@ const Home = () => {
                     <h2 className="section-title">About Me</h2>
                     <div className="about-content">
                         <p>
-                            I'm a builder at heart. Whether it's a complex distributed system or a pixel-perfect iOS app,
-                            I love the process of turning abstract ideas into tangible products that people love.
+                            I grew up writing Swift between computer science lectures at the University of Florida,
+                            launched LiveGreen before graduation, then spent four years inside Microsoft modernizing the admin experience
+                            and launching Copilot’s go-to-market stack. That mix of scrappy founder energy and enterprise rigor
+                            now informs how I scope, prioritize, and measure everything I touch.
                         </p>
                         <p>
-                            My background spans from big tech (Microsoft) to scrappy startups (LiveGreen).
-                            I believe that the best Product Managers are those who can empathize deeply with users
-                            <em>and</em> understand the technical constraints and possibilities of the medium.
+                            I obsess over onboarding friction, instrumentation, and narrative clarity—because the best PM decks read like case studies,
+                            and the best shipped features tell a story. When I’m not iterating on an LLM prompt or refining a SwiftUI animation,
+                            I’m probably mentoring PMs breaking into AI or testing the latest Caltrain build on unsuspecting friends.
+                        </p>
+                        <p>
+                            <strong>Superpowers:</strong> translating user research into crisp product strategy, prototyping fast enough to inform real technical trade-offs,
+                            and partnering with design + engineering to hit ambitious launch dates without sacrificing craft.
                         </p>
                     </div>
                 </div>

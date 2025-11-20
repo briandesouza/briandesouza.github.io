@@ -40,6 +40,9 @@ const Header = () => {
                             {link.name}
                         </Link>
                     ))}
+                    <a href="/Brian De Souza Resume.pdf" target="_blank" rel="noopener noreferrer" className="nav-link resume-link">
+                        Resume
+                    </a>
                 </nav>
 
                 <div className="social-icons">
@@ -66,6 +69,15 @@ const Header = () => {
                                 {link.name}
                             </Link>
                         ))}
+                        <a 
+                            href="/Brian De Souza Resume.pdf" 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="mobile-nav-link resume-link"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            Resume
+                        </a>
                     </nav>
                 )}
             </div>

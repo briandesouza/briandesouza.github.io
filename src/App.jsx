@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Plotwist from './pages/Plotwist';
 import VisionBoardAI from './pages/VisionBoardAI';
+import LiveGreen from './pages/LiveGreen';
 import Layout from './components/Layout/Layout';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/plotwist" element={<Plotwist />} />
                     <Route path="/visionboardai" element={<VisionBoardAI />} />
+                    <Route path="/livegreen" element={<LiveGreen />} />
                 </Routes>
             </Layout>
         </Router>

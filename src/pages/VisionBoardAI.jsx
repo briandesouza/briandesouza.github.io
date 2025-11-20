@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Sparkles, Palette, Lock, Zap, Search, Target, RefreshCw } from 'lucide-react';
+import { ArrowLeft, Sparkles, Lock, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './CaseStudy.css';
 
@@ -13,9 +13,12 @@ const VisionBoardAI = () => {
                     <h1 className="cs-title">VisionBoardAI</h1>
                     <p className="cs-subtitle">Manifest Your Future with AI</p>
                     <div className="cs-tags">
-                        <span>Product Strategy</span>
-                        <span>Design Systems</span>
-                        <span>Local-First UX</span>
+                        <span>Solo Builder</span>
+                        <span>AI UX</span>
+                        <span>TestFlight Build</span>
+                    </div>
+                    <div className="cs-hero-cover">
+                        <img src="/img/visionboard-cover.png" alt="VisionBoardAI preview" />
                     </div>
                 </div>
                 <div className="cs-hero-bg visionboard-bg-gradient"></div>
@@ -26,82 +29,104 @@ const VisionBoardAI = () => {
                 <section className="cs-section">
                     <h2>Overview</h2>
                     <p>
-                        VisionBoardAI is a premium iOS application designed to help users visualize their goals through AI-generated imagery.
-                        It moves beyond static Pinterest boards by allowing users to create "future self" visualizations using advanced image synthesis.
+                        VisionBoardAI is an iOS app I’m building solo to help people picture their future selves. It isn’t released yet—
+                        I’m in a tight TestFlight loop focused on validating the core job: turn one goal statement and a selfie into a believable “future snapshot”
+                        in under a minute.
+                    </p>
+                </section>
+
+                <section className="cs-section">
+                    <h2>Problem & Idea Validation</h2>
+                    <p>
+                        Visualization junkies told me they were tired of Googling stock photos that never looked like them.
+                        I interviewed 20 life coaches, career switchers, and wellness creators, then shipped a clickable prototype to a private Instagram group.
+                        Three hypotheses emerged:
+                    </p>
+                    <ul>
+                        <li>Personal likeness beats generic aspiration—seeing <em>your</em> face is the motivating moment.</li>
+                        <li>People don’t want to write prompts; they want to describe feelings, outfits, or venues.</li>
+                        <li>Trust is non-negotiable—selfies and goal statements should stay on-device whenever possible.</li>
+                    </ul>
+                    <p>
+                        Every TestFlight build is measured against those hypotheses. If I can’t make someone smile when they load their first board,
+                        the feature ships back to the drawing board.
                     </p>
                 </section>
 
                 <section className="cs-section grid-2">
                     <div className="cs-card">
-                        <h3>The Problem</h3>
+                        <h3>Target Customers</h3>
                         <p>
-                            Users struggling with visualization often can't find the <em>exact</em> image that represents their specific goal on Google or Pinterest.
-                            "I want a picture of <em>me</em> speaking at a TED talk," not a stock photo of a stranger.
+                            <strong>Identity-driven goal setters</strong> (24-35) use journaling, therapy, or coaching to stay accountable.
+                            They’re craving custom imagery for public speaking, creative careers, or wellness breakthroughs.
+                        </p>
+                        <p>
+                            <strong>Wellness creators</strong> run cohorts or retreats and want quick artifacts for clients without sending their data to random servers.
                         </p>
                     </div>
                     <div className="cs-card">
-                        <h3>The Solution</h3>
-                        <p>
-                            A "Magic Camera" for your future. We use Generative AI (Stable Diffusion) to let users describe a scenario and see themselves in it,
-                            making the visualization process deeply personal and emotionally resonant.
-                        </p>
+                        <h3>Validation Signals</h3>
+                        <ul>
+                            <li>80% of testers completed a board after seeing themselves in the mockups.</li>
+                            <li>“Can I remix this weekly?” is the most common request, guiding regeneration features.</li>
+                            <li>Coaches continue to DM me for early access, so I’m building a facilitation mode for them.</li>
+                        </ul>
                     </div>
                 </section>
 
                 <section className="cs-section">
-                    <h2>Product Discovery & Iteration</h2>
+                    <h2>Building Solo with Agentic AI</h2>
+                    <p>
+                        There’s no external team. I use agentic tooling to keep velocity high and learn new model capabilities along the way:
+                    </p>
                     <div className="feature-grid">
                         <div className="feature-item">
-                            <Search className="feature-icon" />
-                            <h4>User Insight: "It doesn't feel like me"</h4>
+                            <Sparkles className="feature-icon" />
+                            <h4>Cursor for pairing</h4>
                             <p>
-                                Initial testing revealed that generic AI images weren't motivating. Users needed to see <em>their</em> face in the goal.
+                                Handles SwiftUI scaffolding, Firebase schema tweaks, and quick refactors so I stay focused on user problems instead of boilerplate.
                             </p>
                         </div>
                         <div className="feature-item">
-                            <Target className="feature-icon" />
-                            <h4>Feature: Face Swap Integration</h4>
+                            <Zap className="feature-icon" />
+                            <h4>Claude Code for reasoning</h4>
                             <p>
-                                We integrated a secure Face Swap pipeline. Users upload one selfie, and we seamlessly blend it into their generated vision board images.
-                                This increased "Board Completion Rate" by 60%.
+                                Helps me rewrite research notes into experiment plans, plan flows, and pressure-test prompts before they hit the Worker proxy.
                             </p>
                         </div>
                         <div className="feature-item">
-                            <Palette className="feature-icon" />
-                            <h4>Design: "Premium & Private"</h4>
+                            <Lock className="feature-icon" />
+                            <h4>Codex for automation</h4>
                             <p>
-                                Users treat their vision boards as sacred, private spaces. We designed a "Local-First" architecture where boards live on-device,
-                                and the UI adapts to their system theme (Light/Dark) for a native, premium feel.
+                                Keeps Cloudflare Worker routes, Fal configs, and Firebase security rules in sync so I can ship safely without extra humans.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 <section className="cs-section">
-                    <h2>Technical Execution</h2>
+                    <h2>Architecture & AI Stack</h2>
+                    <ul>
+                        <li><strong>Firebase + Cloudflare Worker:</strong> Firestore/Storage handle board data while a Worker injects Firebase auth into every Fal call so API keys stay server-side.</li>
+                        <li><strong>Fal nano-banana-edit:</strong> Default cover engine that blends up to 10 board images + the user’s selfie into a new scene (see <code>CloudflareWorkers/src/fal-proxy.ts</code>).</li>
+                        <li><strong>Seedream v4 edit:</strong> Used for high-gloss hero shots when users request 4K ratios; configurable directly from <code>model-config.ts</code> without shipping a new binary.</li>
+                        <li><strong>Virtual try-on endpoint:</strong> Powers the wardrobe/“Add Me” experiments so outfits swap locally before syncing to Firebase.</li>
+                        <li><strong>VisionLoadingExperience:</strong> Reusable SwiftUI component that keeps every AI wait state consistent (in <code>Views/Components/VisionLoading</code>).</li>
+                    </ul>
+                </section>
+
+                <section className="cs-section">
+                    <h2>Current Focus & Next Experiments</h2>
                     <p>
-                        To ensure the app felt "native" and "premium", I built a custom design system.
+                        Success right now is learning fast, not vanity metrics. The backlog is prioritized around:
                     </p>
-                    <div className="code-block">
-                        <pre>
-                            <code>
-                                {`// Swift: Adaptive Color System
-struct AdaptiveColors {
-    static var primary: Color {
-        Color(uiColor: UIColor { traitCollection in
-            // Automatically shifts hue based on Light/Dark mode
-            // to maintain the "Premium Pastel" aesthetic
-            return traitCollection.userInterfaceStyle == .dark 
-                ? UIColor(hex: "#E0B0FF") // Light Mauve
-                : UIColor(hex: "#6A0DAD") // Deep Purple
-        })
-    }
-}`}
-                            </code>
-                        </pre>
-                    </div>
-                    <p className="caption">
-                        The "AdaptiveColors" system ensures that every element looks premium in both Light and Dark modes without manual overrides.
+                    <ul>
+                        <li>Helping users describe feelings instead of prompts (guided chips + template language).</li>
+                        <li>Surfacing privacy cues before uploads so people know everything is processed locally.</li>
+                        <li>Scheduling weekly “remix” nudges that regenerate boards with fresh styles.</li>
+                    </ul>
+                    <p>
+                        Once those loops feel tight, I’ll open a larger beta and layer on pricing experiments.
                     </p>
                 </section>
             </div>
