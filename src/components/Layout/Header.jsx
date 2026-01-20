@@ -18,8 +18,6 @@ const Header = () => {
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'Plotwist', path: '/plotwist' },
-        { name: 'VisionBoardAI', path: '/visionboardai' },
     ];
 
     return (
@@ -48,7 +46,7 @@ const Header = () => {
                 <div className="social-icons">
                     <a href="https://github.com/briandesouza" target="_blank" rel="noopener noreferrer"><Github size={20} /></a>
                     <a href="https://linkedin.com/in/briannunesdesouza" target="_blank" rel="noopener noreferrer"><Linkedin size={20} /></a>
-                    <a href="mailto:brian@example.com"><Mail size={20} /></a>
+                    <a href="mailto:brian.nunes.souza@gmail.com"><Mail size={20} /></a>
                 </div>
 
                 {/* Mobile Menu Toggle */}
