@@ -1,95 +1,38 @@
 .footer {
-    padding: 4rem 0 3rem;
+    padding: 2rem 0;
+    background: var(--color-bg-primary);
     border-top: 1px solid var(--glass-border);
-    margin-top: 4rem;
-    background: var(--color-bg-secondary);
-}
-
-.footer .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    color: var(--color-text-secondary);
-    font-size: 0.95rem;
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column;
-    gap: 1.75rem;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
+    gap: 1rem;
 }
 
-.footer-title {
-    font-size: 2rem;
-    color: var(--color-text-primary);
-    margin: 0;
-}
-
-.footer-intro {
-    color: var(--color-text-secondary);
-    margin: 0;
-}
-
-.footer-contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.35rem;
-    font-weight: 600;
-    color: var(--color-text-primary);
-}
-
-.footer-contact-info a {
-    color: var(--color-text-primary);
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-.footer-contact-info a:hover {
-    color: var(--color-accent);
-    border-color: var(--color-accent);
-}
-
-.footer-contact-divider {
+.copyright {
+    font-size: 0.9rem;
     color: var(--color-text-secondary);
 }
 
-.footer-cta h3 {
-    font-size: 1.5rem;
-    color: var(--color-text-primary);
-    margin-bottom: 0.5rem;
-}
-
-.footer-cta p {
-    margin: 0 auto 1.5rem;
-    max-width: 460px;
-    color: var(--color-text-secondary);
-}
-
-.footer-buttons {
+.footer-socials {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-.footer-buttons .btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.85rem 1.4rem;
-}
-
-.footer-bottom {
+.footer-socials a {
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
-    margin: 0;
+    transition: color 0.2s ease;
 }
 
-@media (max-width: 640px) {
-    .footer {
-        padding: 2.5rem 0;
+.footer-socials a:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
     }
 }

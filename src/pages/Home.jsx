@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ExternalLink, Compass, Sparkles, LineChart, Trophy, Medal, Award, Star, Stars, Headphones, Book, Coffee, Gamepad2 } from 'lucide-react';
+import { ArrowRight, ExternalLink, Compass, Sparkles, LineChart, Trophy, Medal, Award, Star, Stars, Headphones, Book, Coffee, Gamepad2, Mail, Linkedin, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -17,13 +17,11 @@ const Home = () => {
                             Product Manager building AI-powered products, growth systems, and consumer apps.
                         </p>
                         <p className="hero-bio">
-                            Product Manager with 4+ years building AI-powered products, growth systems, and consumer apps.
                             At <strong>Microsoft</strong>, I shipped features across Copilot and Microsoft 365 for enterprise and commercial users.
-                            I now advise early-stage startups on 0-to-1 strategy and PMF validation, and I build AI-powered iOS apps like
-                            <strong>Plotwist</strong> and <strong>VisionBoardAI</strong>.
+                            Currently advising early-stage startups on 0-to-1 strategy and PMF validation, and building AI-powered iOS apps.
                         </p>
                         <div className="hero-actions">
-                            <a href="#experience" className="btn btn-primary">View Work</a>
+                            <a href="#projects" className="btn btn-primary">View Work</a>
                             <a href="#contact" className="btn btn-secondary">Contact me</a>
                         </div>
                     </div>
@@ -180,7 +178,88 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* About Section */}
+            {/* Awards Section */}
+            <section id="awards" className="section awards-section">
+                <div className="container">
+                    <h2 className="section-title">Awards & Recognition</h2>
+                    <div className="awards-grid">
+                        <div className="favorite-card award-item">
+                            <div className="favorite-icon">
+                                <Trophy size={20} />
+                            </div>
+                            <div className="favorite-info">
+                                <span className="favorite-label">2019</span>
+                                <span className="favorite-value">University of Florida Business Plan Competition - 1st place</span>
+                            </div>
+                        </div>
+                        <div className="favorite-card award-item">
+                            <div className="favorite-icon">
+                                <Star size={20} />
+                            </div>
+                            <div className="favorite-info">
+                                <span className="favorite-label">2017</span>
+                                <span className="favorite-value">Facebook Global Hackathon - Finalist</span>
+                            </div>
+                        </div>
+                        <div className="favorite-card award-item">
+                            <div className="favorite-icon">
+                                <Medal size={20} />
+                            </div>
+                            <div className="favorite-info">
+                                <span className="favorite-label">2017</span>
+                                <span className="favorite-value">Yale University YHack - Best Hack</span>
+                            </div>
+                        </div>
+                        <div className="favorite-card award-item">
+                            <div className="favorite-icon">
+                                <Medal size={20} />
+                            </div>
+                            <div className="favorite-info">
+                                <span className="favorite-label">2017</span>
+                                <span className="favorite-value">University of Michigan MHacks - Best Hack</span>
+                            </div>
+                        </div>
+                        <div className="favorite-card award-item">
+                            <div className="favorite-icon">
+                                <Medal size={20} />
+                            </div>
+                            <div className="favorite-info">
+                                <span className="favorite-label">2017</span>
+                                <span className="favorite-value">University of Florida SwampHacks - Best Hack</span>
+                            </div>
+                        </div>
+                        <div className="favorite-card award-item">
+                            <div className="favorite-icon">
+                                <Medal size={20} />
+                            </div>
+                            <div className="favorite-info">
+                                <span className="favorite-label">2017</span>
+                                <span className="favorite-value">CalTech HackTech - Best iOS Hack</span>
+                            </div>
+                        </div>
+                        <div className="favorite-card award-item">
+                            <div className="favorite-icon">
+                                <Medal size={20} />
+                            </div>
+                            <div className="favorite-info">
+                                <span className="favorite-label">2017</span>
+                                <span className="favorite-value">University of Houston CodeRed - Best Health Hack</span>
+                            </div>
+                        </div>
+                        <div className="favorite-card award-item">
+                            <div className="favorite-icon">
+                                <Medal size={20} />
+                            </div>
+                            <div className="favorite-info">
+                                <span className="favorite-label">2016</span>
+                                <span className="favorite-value">Duke University HackDuke - Best Hack</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 
             <section id="about" className="section about">
                 <div className="container">
                     <h2 className="section-title">About Me</h2>
@@ -223,60 +302,9 @@ const Home = () => {
                     </div>
 
                     <div className="favorites-section">
-                        <h3 className="favorites-title">Awards</h3>
-                        <div className="favorites-grid">
-                            <div className="favorite-card">
-                                <div className="favorite-icon">
-                                    <Trophy size={20} />
-                                </div>
-                                <div className="favorite-info">
-                                    <span className="favorite-label">2019</span>
-                                    <span className="favorite-value">University of Florida Business Plan Competition - 1st place</span>
-                                </div>
-                            </div>
-                            <div className="favorite-card">
-                                <div className="favorite-icon">
-                                    <Star size={20} />
-                                </div>
-                                <div className="favorite-info">
-                                    <span className="favorite-label">2017</span>
-                                    <span className="favorite-value">Facebook Global Hackathon - Finalist</span>
-                                </div>
-                            </div>
-                            <div className="favorite-card">
-                                <div className="favorite-icon">
-                                    <Medal size={20} />
-                                </div>
-                                <div className="favorite-info">
-                                    <span className="favorite-label">2017</span>
-                                    <span className="favorite-value">University of Michigan MHacks - Best Hack</span>
-                                </div>
-                            </div>
-                            <div className="favorite-card">
-                                <div className="favorite-icon">
-                                    <Award size={20} />
-                                </div>
-                                <div className="favorite-info">
-                                    <span className="favorite-label">2017</span>
-                                    <span className="favorite-value">CalTech HackTech - Best iOS Hack</span>
-                                </div>
-                            </div>
-                            <div className="favorite-card">
-                                <div className="favorite-icon">
-                                    <Stars size={20} />
-                                </div>
-                                <div className="favorite-info">
-                                    <span className="favorite-label">2016</span>
-                                    <span className="favorite-value">Duke University HackDuke - Best Hack</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="favorites-section">
                         <h3 className="favorites-title">When I'm not working</h3>
                         <div className="favorites-grid">
-                            <div className="favorite-card">
+                            <div className="favorite-card hobby-item">
                                 <div className="favorite-icon">
                                     <Headphones size={20} />
                                 </div>
@@ -285,16 +313,16 @@ const Home = () => {
                                     <span className="favorite-value">Acquired Podcast</span>
                                 </div>
                             </div>
-                            <div className="favorite-card">
+                            <div className="favorite-card hobby-item">
                                 <div className="favorite-icon">
                                     <Book size={20} />
                                 </div>
                                 <div className="favorite-info">
                                     <span className="favorite-label">Reading</span>
-                                    <span className="favorite-value">The Cold Start Problem: How to Start and Scale Network Effects</span>
+                                    <span className="favorite-value">The Cold Start Problem</span>
                                 </div>
                             </div>
-                            <div className="favorite-card">
+                            <div className="favorite-card hobby-item">
                                 <div className="favorite-icon">
                                     <Coffee size={20} />
                                 </div>
@@ -303,13 +331,55 @@ const Home = () => {
                                     <span className="favorite-value">Americano</span>
                                 </div>
                             </div>
-                            <div className="favorite-card">
+                            <div className="favorite-card hobby-item">
                                 <div className="favorite-icon">
                                     <Gamepad2 size={20} />
                                 </div>
                                 <div className="favorite-info">
                                     <span className="favorite-label">Video Game</span>
                                     <span className="favorite-value">Civ 5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            */}
+
+            {/* Contact Section */}
+            <section id="contact" className="section contact">
+                <div className="container">
+                    <div className="contact-container">
+                        <div className="contact-header">
+                            <h2 className="section-title">Let's Connect</h2>
+                            <p className="contact-subtitle">
+                                Whether you're building something new or just want to chat about AI and growth, I'd love to hear from you.
+                            </p>
+                        </div>
+                        <div className="contact-card">
+                            <div className="contact-info">
+                                <h3>Get in touch</h3>
+                                <p>I'm always open to new opportunities and collaborations.</p>
+                                <div className="contact-links">
+                                    <a href="mailto:brian.nunes.souza@gmail.com" className="contact-link-item">
+                                        <Mail size={20} />
+                                        <span>brian.nunes.souza@gmail.com</span>
+                                    </a>
+                                    <a href="https://linkedin.com/in/briannunesdesouza" target="_blank" rel="noopener noreferrer" className="contact-link-item">
+                                        <Linkedin size={20} />
+                                        <span>LinkedIn</span>
+                                    </a>
+                                    <a href="https://github.com/briandesouza" target="_blank" rel="noopener noreferrer" className="contact-link-item">
+                                        <Github size={20} />
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="contact-message">
+                                <p>Building at the intersection of AI, Growth, and Product.</p>
+                                <div className="contact-signature">
+                                    <span className="signature-text">Brian De Souza</span>
+                                    <span className="signature-title">Product Manager & Developer</span>
                                 </div>
                             </div>
                         </div>
