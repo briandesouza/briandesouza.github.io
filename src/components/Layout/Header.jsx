@@ -38,7 +38,7 @@ const Header = () => {
                             {link.name}
                         </Link>
                     ))}
-                    <a href="/Brian De Souza Resume.pdf" target="_blank" rel="noopener noreferrer" className="nav-link resume-link">
+                    <a href="/Brian_De_Souza_Resume.pdf" target="_blank" rel="noopener noreferrer" className="nav-link resume-link">
                         Resume
                     </a>
                 </nav>
@@ -68,7 +68,7 @@ const Header = () => {
                             </Link>
                         ))}
                         <a 
-                            href="/Brian De Souza Resume.pdf" 
+                            href="/Brian_De_Souza_Resume.pdf" 
                             target="_blank" 
                             rel="noopener noreferrer" 
                             className="mobile-nav-link resume-link"
