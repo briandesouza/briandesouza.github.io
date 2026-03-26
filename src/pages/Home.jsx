@@ -18,7 +18,7 @@ const Home = () => {
                         </p>
                         <p className="hero-bio">
                             At <strong>Microsoft</strong>, I shipped features across Copilot and Microsoft 365 for enterprise and commercial users.
-                            Currently advising early-stage startups on 0-to-1 strategy and PMF validation, and building AI-powered iOS apps.
+                            Now building <strong>Cited AI</strong>, a GEO platform trusted by enterprise clients, and shipping AI-powered iOS apps.
                         </p>
                         <div className="hero-actions">
                             <a href="#projects" className="btn btn-primary">View Work</a>
@@ -38,25 +38,24 @@ const Home = () => {
                     <h2 className="section-title">Experience & Education</h2>
                     <div className="timeline">
                         <div className="timeline-item">
-                            <div className="timeline-date">May 2025 - Present</div>
+                            <div className="timeline-date">December 2025 - Present</div>
                             <div className="timeline-content">
-                                <h3>Product Advisor</h3>
-                                <p className="company">Freelance</p>
-                                <p>Advise early-stage startups on 0-to-1 product strategy, MVP scope, and go-to-market execution.</p>
+                                <h3>Founder</h3>
+                                <p className="company">Cited AI</p>
+                                <p>Founded usecited.ai, a Generative Engine Optimization (GEO) platform helping brands optimize content for AI engine citations.</p>
                                 <ul>
-                                    <li>Run customer discovery sessions and competitive analysis to validate product-market fit.</li>
-                                    <li>Define backlogs and roadmaps that help lean teams ship faster.</li>
+                                    <li>Trusted by enterprise clients including Selbetti ($125M+ revenue, 2,200+ employees); audits content against 270+ AI citation signals, yielding 3.2x average citation lift across ChatGPT, Gemini, and Google AI Overviews.</li>
+                                    <li>Built the full product using Claude Code; engineered automated research pipeline with OpenClaw to identify GEO strategies across social media and academic papers.</li>
                                 </ul>
                             </div>
                         </div>
                         <div className="timeline-item">
-                            <div className="timeline-date">2024 - May 2025</div>
+                            <div className="timeline-date">2024 - July 2025</div>
                             <div className="timeline-content">
                                 <h3>Product Manager 2, Copilot Growth & Communications</h3>
                                 <p className="company">Microsoft</p>
                                 <p>Shipped engagement and communications experiences across Copilot and Microsoft 365.</p>
                                 <ul>
-                                    <li>Architected a multi-touchpoint engagement system (welcome emails, monthly emails, in-product nudges, admin center, release notes) contributing ~4.5% of monthly Copilot usage of new features.</li>
                                     <li>Launched the direct-to-user welcome email program reaching 800K+ commercial users/month with a +12pp week-one usage lift, 55% open rate, and 18% CTR; expanded coverage from ~42% to 99% of eligible users.</li>
                                     <li>Reduced content production costs ~80% by shipping an LLM-powered pipeline; improved content relevance from 68% to 89%.</li>
                                     <li>Built a unified Copilot Release Notes platform integrating 18 workloads, publishing 350+ features and growing to 13K monthly active IT admins.</li>
@@ -85,6 +84,18 @@ const Home = () => {
                                 <p>Coordinated SHA-1 deprecation across Microsoft Office products.</p>
                                 <ul>
                                     <li>Removed 4,200+ SHA-1 download IDs, republished essential service packs with SHA-2, and built cross-version testing scenarios with security stakeholders.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="timeline-item">
+                            <div className="timeline-date">2018 - 2021</div>
+                            <div className="timeline-content">
+                                <h3>Co-Founder & Head of Product</h3>
+                                <p className="company">LiveGreen</p>
+                                <p>Built a B2C startup for carbon footprint tracking, leading the full 0-to-1 product lifecycle.</p>
+                                <ul>
+                                    <li>Grew to 50K+ active users and facilitated 80K+ trees planted globally.</li>
+                                    <li>Conducted customer interviews, coordinated UI/UX design, and ran A/B experiments optimizing conversion and retention.</li>
                                 </ul>
                             </div>
                         </div>
