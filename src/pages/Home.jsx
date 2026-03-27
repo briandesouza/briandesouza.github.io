@@ -18,7 +18,7 @@ const Home = () => {
                         </p>
                         <p className="hero-bio">
                             At <strong>Microsoft</strong>, I shipped features across Copilot and Microsoft 365 for enterprise and commercial users.
-                            Now building <strong>Cited AI</strong>, a GEO platform trusted by enterprise clients.
+                            Now building <a href="https://usecited.ai" target="_blank" rel="noopener noreferrer"><strong>Cited AI</strong></a>, a GEO platform trusted by enterprise clients.
                         </p>
                         <div className="hero-actions">
                             <a href="#projects" className="btn btn-primary">View Work</a>
@@ -41,7 +41,7 @@ const Home = () => {
                             <div className="timeline-date">December 2025 - Present</div>
                             <div className="timeline-content">
                                 <h3>Founder</h3>
-                                <p className="company">Cited AI</p>
+                                <p className="company"><a href="https://usecited.ai" target="_blank" rel="noopener noreferrer">Cited AI</a></p>
                                 <p>Founded usecited.ai, a Generative Engine Optimization (GEO) platform helping brands optimize content for AI engine citations.</p>
                                 <ul>
                                     <li>Trusted by enterprise clients including Selbetti ($125M+ revenue, 2,200+ employees); audits content against 270+ AI citation signals, yielding 3.2x average citation lift across ChatGPT, Gemini, and Google AI Overviews.</li>
