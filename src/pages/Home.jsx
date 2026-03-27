@@ -18,7 +18,7 @@ const Home = () => {
                         </p>
                         <p className="hero-bio">
                             At <strong>Microsoft</strong>, I shipped features across Copilot and Microsoft 365 for enterprise and commercial users.
-                            Now building <strong>Cited AI</strong>, a GEO platform trusted by enterprise clients, and shipping AI-powered iOS apps.
+                            Now building <strong>Cited AI</strong>, a GEO platform trusted by enterprise clients.
                         </p>
                         <div className="hero-actions">
                             <a href="#projects" className="btn btn-primary">View Work</a>
